@@ -5,6 +5,14 @@
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
+\usepackage{color}
+\usepackage{soul}
+\usepackage{booktabs} % 표를 더 깔끔하게 만들기 위한 패키지
+\usepackage{tabularx} % 표의 너비 조정을 위한 패키지
+\usepackage{hyphenat}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{soul}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \markboth{\journalname, VOL. XX, NO. XX, XXXX 2017}
@@ -103,6 +111,11 @@ A =
 \end{equation}
 
 \begin{equation}
+    \label{Delta Q}
+    \Delta Q_i = \pi r_i^2\left(n_{t,i} - n_{t,i-1}\right)
+\end{equation}
+
+\begin{equation}
     \label{Delta V}
 \Delta V = (V_\text{G} - V_\text{ch}) - \sum_{i=1}^{N} \frac{q n_{t,i}}{4 \epsilon_\mathrm{CTN}}\left(r_i^2 - r_{i-1}^2\right)
 \end{equation}
@@ -110,6 +123,14 @@ A =
 $C_\mathrm{TOX}$, $C_i$, and $C_\mathrm{BOX}$ in \eqref{A} indicates capacitance of each cylindrical layers as shown in Fig. 1(b)-(c).
 $\Delta Q_i$ in \eqref{b} stands for a compenet of radius $r_i$ cylindrical charge which can be superpositioned as $Q=\sum \Delta Q_i$ as demonstrated on Fig. 1(d).
 \eqref{b} shows that $\mathbf{b}(\Delta Q_i, V_\text{G} - V_\text{ch})$ is varied by trapped charge distribution and given voltage conditions.
+
+
+\begin{figure}[!t]
+    \label{fig1}
+    \includegraphics{fig1.png}
+    \caption{(a) shows a radial scale and capacitance visulization, (b) shows the representation of $\Delta Q_i$ within the boundary condition solution, (c) shows the programming sequence of trapped electrons and holes, and (d) shows the autonomous simulation schematics.}
+\end{figure}
+
 
 \subsection{Q - $\Delta V_\text{th}$ Relation}
 For $\Delta V_\text{th}$ calculation, gate voltage difference for equal channel field condition should be solved.
@@ -126,10 +147,11 @@ By Cramer's rule, $K_\mathrm{TOX}$ parameter can be solved by determinant calcul
 
 Therefore, establishing following equation and solving for $\Delta V_\text{th}$ is needed to calculate the value.
 \begin{equation}
+    \label{double.Det}
     \det \left[A_{\mathbf{b}(0,\Delta V_\text{th})}\right] = \det \left[A_{\mathbf{b}(\Delta Q_i,0)}\right]
 \end{equation}
 
-\noindent by property of linear conservation in determinant,
+\noindent by property of multilinearity, $\det \left[A_{\mathbf{b}(0,\Delta V_\text{th})}\right]$ in equation~(\ref{double.Det}) can be calculated as following.
 \begin{equation}
     \det \begin{bmatrix}
 0 & -1 & 0  & \cdots & 0 & 0 \\
@@ -146,17 +168,19 @@ Therefore, establishing following equation and solving for $\Delta V_\text{th}$ 
     \therefore \Delta V_\text{th} = -\det \left[A_{\mathbf{b}(\Delta Q_i,0)}\right]
 \end{equation}
 
-The threshold voltage difference can be calculated with single determinant computation with initial trapped charge distribution is given.
+The threshold voltage difference can be calculated with single determinant computation with initially programmed trapped charge distribution is given as Fig.~\ref{fig1}(d).
+
+
 
 \subsection{Autonomous Detrapping Modeling}
-With given initial condition, an autonomous equation for each cell divided be radial and trap depth as Fig. 2(a) is established.
+With given initial condition, an autonomous equation for each cell divided be radial and trap depth as Fig.~\ref{fig1}(e) is established.
 \begin{equation}
     \frac{d}{dt}{n_t}(r, E_t, t) = -(e_\text{ch} + e_\text{WL}){n_t}(r, E_t, t)
 \end{equation}
 
 Then, detrapping relation can be express as following general ODE solution.
 \begin{equation}
-    n_t(r, E_t, t) = \sum_r \sum_{E_t}n_{t0} \exp (-(e_\text{ch} + e_\text{WL})t)
+    n_t(r, E_t, t) = \sum_r \sum_{E_t}n_{t0}(r, E_t) \exp (-(e_\text{ch} + e_\text{WL})t)
 \end{equation}
 \noindent for hole concentration ($h_t$) vice versa.
 
@@ -173,12 +197,83 @@ The emission rate for trapped electron and hole can be computed as following equ
 
 \noindent for both channel and wordline directions as demonstrated in Fig. 2(a).
 
+This autonomous detrapping modeling methodology enables a simulation to directly comput the result at a specific time without performing any transient time-interval calculations.
+Only the initial condition and the target time are required, eliminating the need for time-stepped simulations.
+
+\begin{table}[t!]
+\caption{PARAMETER VALUES FOR THE TCAD SIMULATION}\label{tab:parameters}
+\centering
+\scriptsize 
+%\small
+\begin{tabular}{@{}lll@{}}
+\toprule
+\textbf{Symbol}                 & \textbf{Physical meaning}             & \textbf{Value} \\ \midrule
+$r_f$                           & Oxide filler radius                   & 20~nm \cite{b13}                          \\ 
+$t_{Si}$                        & Si-channel thickness                  & 8~nm \cite{b13}                           \\
+$t_\mathrm{TOX}$      & Tunneling oxide thickness           & 5~nm \cite{b13}                     \\
+$t_\mathrm{CTN}$                       & Charge trap nitride thickness         & 6~nm \cite{b13}                           \\
+$t_\mathrm{BOX}$                       & Blocking oxide thickness              & 8~nm \cite{b13}                           \\
+$\varepsilon_\text{ox}$              & Oxide permittivity                    & 3.9~$\varepsilon_0$ \cite{b14}             \\
+$\varepsilon_\mathrm{CTN}$             & Charge trap nitride permittivity      & 7.5~$\varepsilon_0$ \cite{b14}             \\
+$\Delta\Phi_\mathrm{Si-ox}$                     & Si-ox layer energy barrier height               & 3.1~eV \cite{b13}                         \\
+$\Delta\Phi_\mathrm{CTN-ox}$                   & CTN-ox layer energy barrier height & 1~eV \cite{b13}                         \\
+$\Delta\Phi_\mathrm{WL-ox}$                    & WL-ox layer energy barrier height            & 3.65~eV \cite{b13}                         \\
+$m^*_\mathrm{ox}$                      & The effective mass of oxide           & 0.5~$m_0$ \cite{b14}                       \\
+$m^*_\mathrm{n}$                       & The effective mass of nitride         & 0.4~$m_0$ \cite{b14}                       \\
+$\sigma_\mathrm{n}$                    & electron capture cross section  & $1 \times 10^{-16}$ cm$^{2}$ \cite{Verr}\\
+$V_\text{pass}$                 & Pass voltage for untarget cell                        & 7.0~V  \cite{b13}           \\
+$V_\text{pgm\_0}$               & Program voltage for $\Delta {V}_\text{th}$ = 0~V & 18.6~V             \\
+$V_\text{pgm\_1}$               & Program voltage for $\Delta {V}_\text{th}$ = 1~V & 19.1~V             \\
+$V_\text{pgm\_2}$               & Program voltage for $\Delta {V}_\text{th}$ = 2~V & 19.6~V             \\
+
+\bottomrule
+\end{tabular}
+\label{table1}
+\end{table}
+\section{Simulation and Result}
+
+
+\begin{figure}
+    \label{fig2}
+    \includegraphics[width=0.5\textwidth]{fig2.png}
+    \caption{(a) shows a radial scale and capacitance visulization, (b) shows the representation of $\Delta Q_i$ within the boundary condition solution, (c) shows the programming sequence of trapped electrons and holes, and (d) shows the autonomous simulation schematics.}
+\end{figure}
+
+The validation of the model is done with Synopsys TCAD simlation which is calibrated with previous studies of retention modeling \cite{Jo.TED2025, Jin.TED2025}.
+In this study, to validate the model properly focused on the scope of detrapping effect from CTN layer, bandgap-engineered process was neglected and the operation conditions such as program voltage were calibrated again for this research.
+
+After the erase operation, $1~\mu \mathrm{s}$ of program voltage was given to all the wordlines of the NAND as table \ref{table1}.
+Note that $\Delta V_\text{th}$ meaning the threshold voltage shift from the virgin cell, which starts from negative value in erased state.
+
+According to the previous study \cite{Refaldi.IRPS2025}, one can achieve this separation of detrapping mechanism by giving cryogenic condition.
+In order to reproduce the cryogenic condition in retention operation, authors have reached this condition by manipulating the capture cross section to extremely low value ($\sigma_\mathrm{n} = 1\times 10^{-16}~\mathrm{cm}^2 \rightarrow 1\times 10^{-50}~\mathrm{cm}^2$) only at the retention operation.
+This manipulation suppresses the thermal transition of electrons between trapped and conduction state within CTN layer as described at Fig.~\ref{fig2}(a).
+This parameter tuning allowed the simulation to emulate the cryogenic effect within the TCAD framework for the retention operation, while maintaining physical consistency in the other operations.
+
+The band diagram model and TCAD simulation setup of programmed voltage shows good match as Fig.~\ref{fig1}(e).
+
+The setup of the simulation was first done with an erase operation, filling up the CTN layer full of holes with sufficient erase operation time \cite{Malavena.TCAD2021, Kim.IEDM2025}.
+First, validation over time span to testing time of 10~years is done as Fig.~\ref{fig2}(a).
+This result shows that the modeling done with the model stated within the previous section very well matches with the referenced TCAD simulation with less than 1% of WMAPE(weighted ) compared .
+
+A validation for autonomous modeling is done on Fig.~\ref{fig2}(c).
+Retention loss over time period makes the change of the band diagram.
+However, Fig.~\ref{fig2}(c) shows that even with several refreshments over time period, there are very small error compared to autonomous modeling with less than 1\% of WMAPE.
+Therefore, autonomous simulation can save computational resource and improve calculation time.
+
+\section{Conclusion}
+An autonomous modeling of retention loss due to detrapping of trapped electron has been done in the study.
+Compared to TCAD simulation with physical parameters calibrated to various previous studies, the model showed its accuracy by achieving less WMAPE less than 1\%.
+Also, novelty of autonomous modeling has been also shown that one can reach a goal of computational optimization within extremely short timeframe.
 
 
 \newpage
 \begin{thebibliography}{00}
 
 \bibitem{Jin.TED2025} G. O. Young, ``Synthetic structure of industrial plastics,'' in \emph{Plastics,} 2\textsuperscript{nd} ed., vol. 3, J. Peters, Ed. New York, NY, USA: McGraw-Hill, 1964, pp. 15--64.
+
+\bibitem{Refaldi.IRPS2025} D. G. Refaldi, G. Malavena, L. Chiavarone, N. Gagliazzi, A. S. Spinelli and C. M. Compagnoni, "Cryogenic Investigation of Vertical Charge Loss in 3D NAND Flash Memories," 2025 IEEE International Reliability Physics Symposium (IRPS), Monterey, CA, USA, 2025, pp. 1-7, doi: 10.1109/IRPS48204.2025.10983672.
+
 
 \bibitem{b2} W.-K. Chen, \emph{Linear Networks and Systems.} Belmont, CA, USA: Wadsworth, 1993, pp. 123--135.
 
@@ -188,79 +283,7 @@ The emission rate for trapped electron and hole can be computed as following equ
 
 \bibitem{b5} E. H. Miller, ``A note on reflector arrays,'' \emph{IEEE Trans. Antennas Propagat}., to be published.
 
-\bibitem{b6} E. E. Reber, R. L. Michell, and C. J. Carter, ``Oxygen absorption in the earth's atmosphere,'' Aerospace Corp., Los Angeles, CA, USA, Tech. Rep. TR-0200 (4230-46)-3, Nov. 1988.
 
-\bibitem{b7} J. H. Davis and J. R. Cogdell, ``Calibration program for the 16-foot antenna,'' Elect. Eng. Res. Lab., Univ. Texas, Austin, TX, USA, Tech. Memo. NGL-006-69-3, Nov. 15, 1987.
-
-\bibitem{b8} \emph{Transmission Systems for Communications}, 3\textsuperscript{rd} ed., Western Electric Co., Winston-Salem, NC, USA, 1985, pp. 44--60.
-
-\bibitem{b9} \emph{Motorola Semiconductor Data Manual}, Motorola Semiconductor Products Inc., Phoenix, AZ, USA, 1989.
-
-\bibitem{b10} G. O. Young, ``Synthetic structure of industrial
-plastics,'' in Plastics, vol. 3, Polymers of Hexadromicon, J. Peters,
-Ed., 2\textsuperscript{nd} ed. New York, NY, USA: McGraw-Hill, 1964, pp. 15-64.
-[Online]. Available:
-\underline{http://www.bookref.com}.
-
-\bibitem{b11} \emph{The Founders' Constitution}, Philip B. Kurland
-and Ralph Lerner, eds., Chicago, IL, USA: Univ. Chicago Press, 1987.
-[Online]. Available: \underline{http://press-pubs.uchicago.edu/founders/}
-
-\bibitem{b12} The Terahertz Wave eBook. ZOmega Terahertz Corp., 2014.
-[Online]. Available:
-\underline{http://dl.z-thz.com/eBook/zomega\_ebook\_pdf\_1206\_sr.pdf}. Accessed on: May 19, 2014.
-
-\bibitem{b13} Philip B. Kurland and Ralph Lerner, eds., \emph{The
-Founders' Constitution.} Chicago, IL, USA: Univ. of Chicago Press,
-1987, Accessed on: Feb. 28, 2010, [Online] Available:
-\underline{http://press-pubs.uchicago.edu/founders/}
-
-\bibitem{b14} J. S. Turner, ``New directions in communications,'' \emph{IEEE J. Sel. Areas Commun}., vol. 13, no. 1, pp. 11-23, Jan. 1995.
-
-\bibitem{b15} W. P. Risk, G. S. Kino, and H. J. Shaw, ``Fiber-optic frequency shifter using a surface acoustic wave incident at an oblique angle,'' \emph{Opt. Lett.}, vol. 11, no. 2, pp. 115--117, Feb. 1986.
-
-\bibitem{b16} P. Kopyt \emph{et al., ``}Electric properties of graphene-based conductive layers from DC up to terahertz range,'' \emph{IEEE THz Sci. Technol.,} to be published. DOI: 10.1109/TTHZ.2016.2544142.
-
-\bibitem{b17} PROCESS Corporation, Boston, MA, USA. Intranets:
-Internet technologies deployed behind the firewall for corporate
-productivity. Presented at INET96 Annual Meeting. [Online].
-Available: \underline{http://home.process.com/Intranets/wp2.htp}
-
-\bibitem{b18} R. J. Hijmans and J. van Etten, ``Raster: Geographic analysis and modeling with raster data,'' R Package Version 2.0-12, Jan. 12, 2012. [Online]. Available: \underline {http://CRAN.R-project.org/package=raster} 
-
-\bibitem{b19} Teralyzer. Lytera UG, Kirchhain, Germany [Online].
-Available:
-\underline{http://www.lytera.de/Terahertz\_THz\_Spectroscopy.php?id=home}, Accessed on: Jun. 5, 2014
-
-\bibitem{b20} U.S. House. 102\textsuperscript{nd} Congress, 1\textsuperscript{st} Session. (1991, Jan. 11). \emph{H. Con. Res. 1, Sense of the Congress on Approval of}  \emph{Military Action}. [Online]. Available: LEXIS Library: GENFED File: BILLS
-
-\bibitem{b21} Musical toothbrush with mirror, by L.M.R. Brooks. (1992, May 19). Patent D 326 189 [Online]. Available: NEXIS Library: LEXPAT File: DES
-
-\bibitem{b22} D. B. Payne and J. R. Stern, ``Wavelength-switched pas- sively coupled single-mode optical network,'' in \emph{Proc. IOOC-ECOC,} Boston, MA, USA, 1985, pp. 585--590.
-
-\bibitem{b23} D. Ebehard and E. Voges, ``Digital single sideband detection for interferometric sensors,'' presented at the \emph{2\textsuperscript{nd} Int. Conf. Optical Fiber Sensors,} Stuttgart, Germany, Jan. 2-5, 1984.
-
-\bibitem{b24} G. Brandli and M. Dick, ``Alternating current fed power supply,'' U.S. Patent 4 084 217, Nov. 4, 1978.
-
-\bibitem{b25} J. O. Williams, ``Narrow-band analyzer,'' Ph.D. dissertation, Dept. Elect. Eng., Harvard Univ., Cambridge, MA, USA, 1993.
-
-\bibitem{b26} N. Kawasaki, ``Parametric study of thermal and chemical nonequilibrium nozzle flow,'' M.S. thesis, Dept. Electron. Eng., Osaka Univ., Osaka, Japan, 1993.
-
-\bibitem{b27} A. Harrison, private communication, May 1995.
-
-\bibitem{b28} B. Smith, ``An approach to graphs of linear forms,'' unpublished.
-
-\bibitem{b29} A. Brahms, ``Representation error for real numbers in binary computer arithmetic,'' IEEE Computer Group Repository, Paper R-67-85.
-
-\bibitem{b30} IEEE Criteria for Class IE Electric Systems, IEEE Standard 308, 1969.
-
-\bibitem{b31} Letter Symbols for Quantities, ANSI Standard Y10.5-1968.
-
-\bibitem{b32} R. Fardel, M. Nagel, F. Nuesch, T. Lippert, and A. Wokaun, ``Fabrication of organic light emitting diode pixels by laser-assisted forward transfer,'' \emph{Appl. Phys. Lett.}, vol. 91, no. 6, Aug. 2007, Art. no. 061103.~
-
-\bibitem{b33} J. Zhang and N. Tansu, ``Optical gain and laser characteristics of InGaN quantum wells on ternary InGaN substrates,'' \emph{IEEE Photon. J.}, vol. 5, no. 2, Apr. 2013, Art. no. 2600111
-
-\bibitem{b34} S. Azodolmolky~\emph{et al.}, Experimental demonstration of an impairment aware network planning and operation tool for transparent/translucent optical networks,''~\emph{J. Lightw. Technol.}, vol. 29, no. 4, pp. 439--448, Sep. 2011.
 
 \end{thebibliography}
 
