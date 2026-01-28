@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1769431725.22568 "c:/Users/user/Desktop/Desktop_offline/TCADtarget-manuscript-Jan/generic-color.tex" "generic-color.pdf" "generic-color" 1769431726.4625 0
+["pdflatex"] 1769566879.85727 "c:/Users/user/Desktop/Desktop_offline/TCADtarget-manuscript-Jan/generic-color.tex" "generic-color.pdf" "generic-color" 1769566881.29323 0
   "C:/Users/user/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1755573858 175421 da70da7dd4f994a91b062a0ddb3fd5e1 ""
   "C:/Users/user/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1747375721 13157157 b1608c21c52dfd06e84b61e62fc6182a ""
   "C:/Users/user/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -154,12 +154,12 @@
   "C:/Users/user/AppData/Local/Programs/MiKTeX/tex/latex/ulem/ulem.sty" 1578651445 15682 94f55b803e160cf7fb6e4d77d07cfe1d ""
   "C:/Users/user/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "LOGO-generic-web.eps" 1748685760 96860 991288daab2defa3899e7c0d849884be ""
-  "c:/Users/user/Desktop/Desktop_offline/TCADtarget-manuscript-Jan/generic-color.tex" 1769431724 16508 4240a4cd86f4459e99939389b8190ce3 ""
+  "c:/Users/user/Desktop/Desktop_offline/TCADtarget-manuscript-Jan/generic-color.tex" 1769566878 16446 19955568ef7b75d1ecb9997f31f1f2f8 ""
   "fig1.png" 1769431140 180404 be3faffde1908b2bbd389d9acca01ba4 ""
   "fig2.png" 1769420495 126039 718ad0026b2f618d2487deb9a9181b0b ""
-  "generic-color.aux" 1769431726 3157 4e7a9279837fb57a7dd7479a5d00516f "pdflatex"
-  "generic-color.out" 1769431726 1074 d5683fadb5c59152223d1bce91336c67 "pdflatex"
-  "generic-color.tex" 1769431724 16508 4240a4cd86f4459e99939389b8190ce3 ""
+  "generic-color.aux" 1769566881 3157 4e7a9279837fb57a7dd7479a5d00516f "pdflatex"
+  "generic-color.out" 1769566881 1074 d5683fadb5c59152223d1bce91336c67 "pdflatex"
+  "generic-color.tex" 1769566878 16446 19955568ef7b75d1ecb9997f31f1f2f8 ""
   "generic.sty" 1748685760 192 e8d3ecc691fbbb2da183dfc84a675b29 ""
   "ieeecolor.cls" 1748685760 224773 9f9540495f1e1a992a162661c1be18be ""
   (generated)
