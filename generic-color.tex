@@ -41,25 +41,26 @@ Bandgap-Engineered 3D NAND Flash, Soft Program, Pass Voltage, $\Delta V_\text{T}
 
 \section{Introduction}
 \label{sec:introduction}
-\IEEEPARstart{T}{here} is a rapid increase in the demand for data storage driven by modern computing technologies such as artificial intellegence (AI) and high-performance computing (HPC), 3-D NAND flash memories' reliability issue for retention loss must be concerned.
-As data storage capacity per cell increases, the reliability of each bit's $\Delta V_{th}$ distribution must be maintained over a long period, ranging from a few days to several years.
+\IEEEPARstart{T}{here} rapid increase in data storage demand, driven by emerging computing technologies such as artificial intelligence (AI) and high-performance computing (HPC), has raised significant concerns about the reliability of 3-D NAND flash memories, particularly regarding retention loss.
 
-It has been reported that detrapping effect occur under cryogenic condition.
-This aligns with the previous study of detrapping modeled independent of temperature.
+As the storage capacity per cell continues to increase, it becomes essential to maintain the reliability of each bit’s threshold voltage distribution over extended periods, ranging from several days to multiple years.
 
-In this study, an autonomous modeling of the retention loss by tunneling emission of 3-D NAND flash memory has been constructed.
-Only initial condition matters for this simulation with highly fast simulation time.
+Previous studies have reported that charge detrapping can occur even under cryogenic conditions, which is consistent with earlier models assuming temperature-independent detrapping behavior.
+
+In this study, an autonomous model for retention loss based on tunneling emission mechanisms in 3-D NAND flash memory is developed. The proposed simulation framework requires only the initial condition as input and enables highly efficient computation with significantly reduced simulation time.
+
 
 \section{Modeling}
 
-The modeling of autonomous simulation for retention loss is held in this section.
-First, a cylindrical poisson solution for O/N/O layer will be done with quantized multiple layer in CTN layer.
-After the detailed poisson solution for multiple quantized layers is solved, $\Delta V_\text{th}$ will be solved with optimized calculation.
-Last, based on a previous study of emission rate by detrapping effect, an autonomous equation is suggested.
+This section presents the modeling framework for autonomous simulation of retention loss.
+
+First, a cylindrical Poisson solution is derived for the oxide–nitride–oxide (O/N/O) gate stack, incorporating quantized multiple layers within the charge trap nitride (CTN) layer.
+After obtaining the detailed Poisson solution for these discretized layers, the threshold voltage shift ($\Delta V_\mathrm{th}$) is calculated using an optimized numerical scheme.
+Finally, based on previous studies of detrapping-induced emission rates, an autonomous equation governing retention loss behavior is proposed.
 
 \subsection{Detailed Poisson Solution}
 
-An electrical potential distribution of a cylindrical Poisson equation for split layers in ONO structure can be solved as following equation.
+An electrical potential distribution obtained from the cylindrical Poisson equation for discretized layers in the ONO structure can be expressed as follows.
 \begin{equation}
 \begin{cases}
 V_\mathrm{Si}(r_\text{Si}) = V_\mathrm{ch} \\
@@ -69,6 +70,7 @@ V_\mathrm{BOX}(r) = V_{\mathrm{CTN},N} (r_{N}) + \frac{K_\mathrm{BOX}}{\epsilon_
 V_\mathrm{BOX}(r_\mathrm{BOX}) = V_\text{G}
 \end{cases}
 \end{equation}
+\noindent where $i=1–N$ denotes the index of each discretized slice of the CTN layer in the radial direction, and $N$ is the total number of radial partitions.
 
 Solving $\mathbf{x}$ vector can calculate the total $N+2$ potential parameters.
 
@@ -82,7 +84,7 @@ K_{TOX} & K_1 & \cdots & K_N & K_{BOX} \\
 A\mathbf{x} = \mathbf{b}
 \end{equation}
 
-A and b can be defined with total $N+1$ transverse electric field equality boundary conditions ($\epsilon_1 \mathcal{E}_1 = \epsilon_2 \mathcal{E}_2$) and one extra boundary condition with reference voltage.
+Matrix $\mathrm{A}$ and vector $\mathbf{b}$ are constructed by enforcing a total of $N+1$ transverse electric field continuity conditions ($\epsilon_1 \mathcal{E}_1 = \epsilon_2 \mathcal{E}_2$) together with an additional boundary condition defined by reference potential.
 
 \begin{equation}
     \label{A}
@@ -120,10 +122,9 @@ A =
 \Delta V = (V_\text{G} - V_\text{ch}) - \sum_{i=1}^{N} \frac{q n_{t,i}}{4 \epsilon_\mathrm{CTN}}\left(r_i^2 - r_{i-1}^2\right)
 \end{equation}
 
-$C_\mathrm{TOX}$, $C_i$, and $C_\mathrm{BOX}$ in \eqref{A} indicates capacitance of each cylindrical layers as shown in Fig. 1(b)-(c).
-$\Delta Q_i$ in \eqref{b} stands for a compenet of radius $r_i$ cylindrical charge which can be superpositioned as $Q=\sum \Delta Q_i$ as demonstrated on Fig. 1(d).
-\eqref{b} shows that $\mathbf{b}(\Delta Q_i, V_\text{G} - V_\text{ch})$ is varied by trapped charge distribution and given voltage conditions.
-
+$C_\mathrm{TOX}$, $C_i$, and $C_\mathrm{BOX}$ in \eqref{A} denote the capacitances of each cylindrical layer, as illustrated in Fig. 1(c).
+$\Delta Q_i$ in \eqref{b} represents the charge component associated with the cylindrical shell at radius $r_i$, which can be superpositioned as $Q=\sum \Delta Q_i$ as demonstrated on Fig. 1(d).
+Furthermore, \eqref{b} indicates that $\mathbf{b}(\Delta Q_i, V_\text{G} - V_\text{ch})$ varies with the trapped charge distribution and the applied voltage conditions.
 
 \begin{figure}[!t]
     \label{fig1}
@@ -133,12 +134,13 @@ $\Delta Q_i$ in \eqref{b} stands for a compenet of radius $r_i$ cylindrical char
 
 
 \subsection{Q - $\Delta V_\text{th}$ Relation}
-For $\Delta V_\text{th}$ calculation, gate voltage difference for equal channel field condition should be solved.
+For the $\Delta V_\text{th}$ calculation, the gate voltage difference required to maintain equal channel field conditions must be determined.
 \begin{equation}
     F_\mathrm{TOX}(r_\text{Si}) = \frac{K_\mathrm{TOX}}{\epsilon_\mathrm{TOX}} \frac{1}{r_\text{Si}}
 \end{equation}
-\noindent to achieve equal channel field, same $K_\mathrm{TOX}$ value under given conditions mush be established.
-By Cramer's rule, $K_\mathrm{TOX}$ parameter can be solved by determinant calculation.
+
+To achieve equal channel field conditions, the same $K_\mathrm{TOX}$ value under the given conditions must be established.  
+By Cramer's rule, the $K_\mathrm{TOX}$ parameter can be solved through determinant calculation.
 \begin{equation}
     K_\mathrm{TOX} = \frac{\det \left[A_{\mathbf{b}(\Delta Q_i,\Delta V_\text{th})}\right]}{ \det A}
 \end{equation}
@@ -168,37 +170,8 @@ Therefore, establishing following equation and solving for $\Delta V_\text{th}$ 
     \therefore \Delta V_\text{th} = -\det \left[A_{\mathbf{b}(\Delta Q_i,0)}\right]
 \end{equation}
 
-The threshold voltage difference can be calculated with single determinant computation with initially programmed trapped charge distribution is given as Fig.~\ref{fig1}(d).
+The threshold voltage difference can be calculated with single determinant computation with initially programmed trapped charge distribution is given as Fig.~1(d).
 
-
-
-\subsection{Autonomous Detrapping Modeling}
-With given initial condition, an autonomous equation for each cell divided be radial and trap depth as Fig.~\ref{fig1}(e) is established.
-\begin{equation}
-    \frac{d}{dt}{n_t}(r, E_t, t) = -(e_\text{ch} + e_\text{WL}){n_t}(r, E_t, t)
-\end{equation}
-
-Then, detrapping relation can be express as following general ODE solution.
-\begin{equation}
-    n_t(r, E_t, t) = \sum_r \sum_{E_t}n_{t0}(r, E_t) \exp (-(e_\text{ch} + e_\text{WL})t)
-\end{equation}
-\noindent for hole concentration ($h_t$) vice versa.
-
-The emission rate for trapped electron and hole can be computed as following equations based on a previous study \cite{Jin.TED2025}.
-\begin{equation}
-    e = \nu \times \left|TC\right|
-\end{equation}
-\begin{equation}
-    \nu = \frac{2 \pi}{\hbar} \left|E_t\right|^2 V_\text{trap} \cdot \frac{m*\sqrt{2m*}}{\pi^2 \hbar^3}\sqrt{E-E_\text{trap}}
-\end{equation}
-\begin{equation}
-    \left|TC\right| = \prod \exp{\frac{4\sqrt{2m^*}}{3\hbar q} \frac{\Phi_H^{1.5} - \Phi_L^{1.5}}{F}}
-\end{equation}
-
-\noindent for both channel and wordline directions as demonstrated in Fig. 2(a).
-
-This autonomous detrapping modeling methodology enables a simulation to directly comput the result at a specific time without performing any transient time-interval calculations.
-Only the initial condition and the target time are required, eliminating the need for time-stepped simulations.
 
 \begin{table}[t!]
 \caption{PARAMETER VALUES FOR THE TCAD SIMULATION}\label{tab:parameters}
@@ -221,15 +194,44 @@ $\Delta\Phi_\mathrm{WL-ox}$                    & WL-ox layer energy barrier heig
 $m^*_\mathrm{ox}$                      & The effective mass of oxide           & 0.5~$m_0$ \cite{b14}                       \\
 $m^*_\mathrm{n}$                       & The effective mass of nitride         & 0.4~$m_0$ \cite{b14}                       \\
 $\sigma_\mathrm{n}$                    & electron capture cross section  & $1 \times 10^{-16}$ cm$^{2}$ \cite{Verr}\\
+$\mu_\mathrm{n, h}$                    & carrier mobility  & $1 \times 10^{-4}$ cm$^{2} / \mathrm{V} \cdot \mathrm{s}$ \cite{Verr}\\
 $V_\text{pass}$                 & Pass voltage for untarget cell                        & 7.0~V  \cite{b13}           \\
-$V_\text{pgm\_0}$               & Program voltage for $\Delta {V}_\text{th}$ = 0~V & 18.6~V             \\
-$V_\text{pgm\_1}$               & Program voltage for $\Delta {V}_\text{th}$ = 1~V & 19.1~V             \\
-$V_\text{pgm\_2}$               & Program voltage for $\Delta {V}_\text{th}$ = 2~V & 19.6~V             \\
+$V_\text{pgm\_1}$               & Program voltage for $\Delta {V}_\text{th}$ = 1~V & 19.6~V             \\
 
 \bottomrule
 \end{tabular}
 \label{table1}
 \end{table}
+
+
+\subsection{Autonomous Detrapping Modeling}
+With the given initial conditions, an autonomous equation is established for each cell, divided by radial position and trap depth as shown in Fig.~1(e).
+\begin{equation}
+    \frac{d}{dt}{n_t}(r, E_t, t) = -(e_\text{ch} + e_\text{WL}){n_t}(r, E_t, t)
+\end{equation}
+
+Then, detrapping relation can be express as following general ODE solution.
+\begin{equation}
+    n_t(r, E_t, t) = \sum_r \sum_{E_t}n_{t0}(r, E_t) \exp (-(e_\text{ch} + e_\text{WL})t)
+\end{equation}
+% \noindent for hole concentration ($h_t$) vice versa.
+
+The emission rate for trapped electron and hole can be computed as following equations based on a previous study \cite{Jin.TED2025}.
+\begin{equation}
+    e = \nu \times \left|TC\right|
+\end{equation}
+\begin{equation}
+    \nu = \frac{2 \pi}{\hbar} \left|E_t\right|^2 V_\text{trap} \cdot \frac{m*\sqrt{2m*}}{\pi^2 \hbar^3}\sqrt{E-E_\text{trap}}
+\end{equation}
+\begin{equation}
+    \left|TC\right| = \prod \exp{\frac{4\sqrt{2m^*}}{3\hbar q} \frac{\Phi_H^{1.5} - \Phi_L^{1.5}}{F}}
+\end{equation}
+
+\noindent for both channel and wordline directions as demonstrated in Fig.~1(a).
+
+This autonomous detrapping modeling methodology enables a simulation to directly comput the result at a specific time without performing any transient time-interval calculations.
+Only the initial condition and the target time are required, eliminating the need for time-stepped simulations.
+
 \section{Simulation and Result}
 
 
@@ -239,32 +241,28 @@ $V_\text{pgm\_2}$               & Program voltage for $\Delta {V}_\text{th}$ = 2
     \caption{(a) shows a radial scale and capacitance visulization, (b) shows the representation of $\Delta Q_i$ within the boundary condition solution, (c) shows the programming sequence of trapped electrons and holes, and (d) shows the autonomous simulation schematics.}
 \end{figure}
 
-The validation of the model is done with Synopsys TCAD simlation which is calibrated with previous studies of retention modeling \cite{Jo.TED2025, Jin.TED2025}.
-In this study, to validate the model properly focused on the scope of detrapping effect from CTN layer, bandgap-engineered process was neglected and the operation conditions such as program voltage were calibrated again for this research.
+The model validation is performed using Synopsys TCAD simulations calibrated against previous retention modeling studies~\cite{Jo.TED2025, Jin.TED2025}. 
+To properly focus on the detrapping effect from the CTN layer, bandgap-engineered processes were neglected, and operating conditions such as program voltage were recalibrated for this study.
 
-After the erase operation, $1~\mu \mathrm{s}$ of program voltage was given to all the wordlines of the NAND as table \ref{table1}.
-Note that $\Delta V_\text{th}$ meaning the threshold voltage shift from the virgin cell, which starts from negative value in erased state.
+Following the erase operation, a program voltage of $1~\mu\mathrm{s}$ was applied to all wordlines as listed in Table~1. 
+Note that $\Delta V_\text{th}$ represents the threshold voltage shift from the virgin cell state, which starts from a negative value in the erased state.
 
-According to the previous study \cite{Refaldi.IRPS2025}, one can achieve this separation of detrapping mechanism by giving cryogenic condition.
-In order to reproduce the cryogenic condition in retention operation, authors have reached this condition by manipulating the capture cross section to extremely low value ($\sigma_\mathrm{n} \rightarrow 0$) only at the retention operation.
-This manipulation suppresses the thermal transition of electrons between trapped and conduction state within CTN layer as described at Fig.~\ref{fig2}(a).
-This parameter tuning allowed the simulation to emulate the cryogenic effect within the TCAD framework for the retention operation, while maintaining physical consistency in the other operations.
+According to Refaldi~et.al~\cite{Refaldi.IRPS2025}, cryogenic conditions enable separation of the detrapping mechanism. 
+To emulate cryogenic conditions during retention operation within the TCAD framework, the capture cross-section was adjusted to an extremely low value ($\sigma_\mathrm{n} \rightarrow 0$) only during retention. 
+This manipulation suppresses thermal electron transitions between trapped and conduction states within the CTN layer, as illustrated in Fig.~2(a), while maintaining physical consistency in other operations.
 
-The band diagram model and TCAD simulation setup of programmed voltage shows good match as Fig.~\ref{fig1}(e).
+The simulation setup began with an erase operation that fully filled the CTN layer with holes using sufficient erase time~\cite{Malavena.TCAD2021, Kim.IEDM2025}. 
+First, validation was conducted over a time span extending to 10~years, as shown in Fig.~2(a). 
+The proposed model from the previous section matches the reference TCAD simulation with less than 1\% weighted mean absolute percentage error (WMAPE).
 
-The setup of the simulation was first done with an erase operation, filling up the CTN layer full of holes with sufficient erase operation time \cite{Malavena.TCAD2021, Kim.IEDM2025}.
-First, validation over time span to testing time of 10~years is done as Fig.~\ref{fig2}(a).
-This result shows that the modeling done with the model stated within the previous section very well matches with the referenced TCAD simulation with less than 1% of WMAPE(weighted ) compared .
-
-A validation for autonomous modeling is done on Fig.~\ref{fig2}(c).
-Retention loss over time period makes the change of the band diagram.
-However, Fig.~\ref{fig2}(c) shows that even with several refreshments over time period, there are very small error compared to autonomous modeling with less than 1\% of WMAPE.
-Therefore, autonomous simulation can save computational resource and improve calculation time.
+Validation of the autonomous modeling is presented in Fig.~2(c). 
+Retention loss over time alters the band diagram; however, even with multiple refresh cycles, the autonomous model exhibits very small errors compared to full TCAD simulation, achieving less than 1\% WMAPE. 
+Thus, the autonomous simulation significantly reduces computational resources and improves calculation efficiency.
 
 \section{Conclusion}
-An autonomous modeling of retention loss due to detrapping of trapped electron has been done in the study.
-Compared to TCAD simulation with physical parameters calibrated to various previous studies, the model showed its accuracy by achieving less WMAPE less than 1\%.
-Also, novelty of autonomous modeling has been also shown that one can reach a goal of computational optimization within extremely short timeframe.
+This study presents an autonomous model for retention loss due to detrapping of trapped electrons. 
+Compared to TCAD simulations calibrated with physical parameters from various prior studies, the proposed model demonstrates high accuracy with weighted mean absolute percentage error (WMAPE) below 1\%. 
+Additionally, the novelty of autonomous modeling is demonstrated through significant computational optimization, achieving results within an extremely short timeframe.
 
 
 \newpage
@@ -274,6 +272,7 @@ Also, novelty of autonomous modeling has been also shown that one can reach a go
 
 \bibitem{Refaldi.IRPS2025} D. G. Refaldi, G. Malavena, L. Chiavarone, N. Gagliazzi, A. S. Spinelli and C. M. Compagnoni, "Cryogenic Investigation of Vertical Charge Loss in 3D NAND Flash Memories," 2025 IEEE International Reliability Physics Symposium (IRPS), Monterey, CA, USA, 2025, pp. 1-7, doi: 10.1109/IRPS48204.2025.10983672.
 
+\bibitem{Jo.TED2025} H. Jo and H. Shin, "Compact Modeling of Trap-Assisted Tunneling Current in 3-D NAND Flash Memory," in IEEE Transactions on Electron Devices, vol. 72, no. 4, pp. 1745-1749, April 2025, doi: 10.1109/TED.2025.3541603.
 
 \bibitem{b2} W.-K. Chen, \emph{Linear Networks and Systems.} Belmont, CA, USA: Wadsworth, 1993, pp. 123--135.
 
