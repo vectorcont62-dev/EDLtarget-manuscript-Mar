@@ -18,13 +18,11 @@
 \markboth{\journalname, VOL. XX, NO. XX, XXXX 2017}
 {Author \MakeLowercase{\textit{et al.}}: Preparation of Papers for IEEE TRANSACTIONS and JOURNALS (February 2017)}
 \begin{document}
-\title{Autonomous Physics-Based Modeling of Retention Loss in 3-D NAND Flash Memories}
-\author{Myung Jin and , \IEEEmembership{Member, IEEE}
-\thanks{Myung Jin is with the Seoul National University(e-mail: gsjb1028@snu.ac.kr). }
-\thanks{S. B. Author, Jr., was with Rice University, Houston, TX 77005 USA. He is 
-now with the Department of Physics, Colorado State University, Fort Collins, 
-CO 80523 USA (e-mail: author@lamar.colostate.edu).}
-}
+\title{Autonomous Physics-Based Modeling of Retention Loss in 3-D NAND Flash Memories}\author{Myung Jin and Hyungcheol Shin, \IEEEmembership{Senior Member, IEEE}
+\thanks{This paragraph of the first footnote will contain the date on 
+which you submitted your paper for review. (\textit{Corresponding Author: Myung Jin; Hyungcheol Shin.}) }
+\thanks{Myung Jin is with the Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea (e-mail: gsjb1028@snu.ac.kr).}
+\thanks{Hyungcheol Shin is with the Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea, and also with Integra Semiconductor, Ltd. (e-mail: hcshin@snu.ac.kr).}}
 
 \maketitle
 
@@ -41,11 +39,10 @@ Bandgap-Engineered 3D NAND Flash, Soft Program, Pass Voltage, $\Delta V_\text{T}
 
 \section{Introduction}
 \label{sec:introduction}
-\IEEEPARstart{T}{here} rapid increase in data storage demand, driven by emerging computing technologies such as artificial intelligence (AI) and high-performance computing (HPC), has raised significant concerns about the reliability of 3-D NAND flash memories, particularly regarding retention loss.
+\IEEEPARstart{T}{here} rapid increase in data storage demand, driven by emerging computing technologies such as artificial intelligence (AI) and high-performance computing (HPC), has raised significant concerns about the reliability of 3-D NAND flash memories, particularly regarding retention loss~\cite{agoda}.
 
-As the storage capacity per cell continues to increase, it becomes essential to maintain the reliability of each bit’s threshold voltage distribution over extended periods, ranging from several days to multiple years.
-
-Previous studies have reported that charge detrapping can occur even under cryogenic conditions, which is consistent with earlier models assuming temperature-independent detrapping behavior.
+As storage capacity per cell increases, ensuring long-term stability of each bit’s threshold voltage distribution over time scales from days to years becomes increasingly critical.
+Moreover, prior works have shown that charge detrapping can still occur at cryogenic temperatures, supporting earlier models that treat detrapping as largely temperature independent~\cite{Refaldi.IRPS2025}.
 
 In this study, an autonomous model for retention loss based on tunneling emission mechanisms in 3-D NAND flash memory is developed. The proposed simulation framework requires only the initial condition as input and enables highly efficient computation with significantly reduced simulation time.
 
@@ -53,14 +50,13 @@ In this study, an autonomous model for retention loss based on tunneling emissio
 \section{Modeling}
 
 This section presents the modeling framework for autonomous simulation of retention loss.
-
 First, a cylindrical Poisson solution is derived for the oxide–nitride–oxide (O/N/O) gate stack, incorporating quantized multiple layers within the charge trap nitride (CTN) layer.
 After obtaining the detailed Poisson solution for these discretized layers, the threshold voltage shift ($\Delta V_\mathrm{th}$) is calculated using an optimized numerical scheme.
-Finally, based on previous studies of detrapping-induced emission rates, an autonomous equation governing retention loss behavior is proposed.
+Finally, based on previous studies of detrapping-induced emission rates~\cite{Jin.TED2025}, an autonomous equation governing retention loss behavior is proposed.
 
 \subsection{Detailed Poisson Solution}
 
-An electrical potential distribution obtained from the cylindrical Poisson equation for discretized layers in the ONO structure can be expressed as follows.
+An electrical potential distribution obtained from the cylindrical Poisson equation for discretized layers in the ONO structure can be expressed as follows~\cite{Jin.TED2025,Amoroso.TED}.
 \begin{equation}
 \begin{cases}
 V_\mathrm{Si}(r_\text{Si}) = V_\mathrm{ch} \\
@@ -70,7 +66,7 @@ V_\mathrm{BOX}(r) = V_{\mathrm{CTN},N} (r_{N}) + \frac{K_\mathrm{BOX}}{\epsilon_
 V_\mathrm{BOX}(r_\mathrm{BOX}) = V_\text{G}
 \end{cases}
 \end{equation}
-\noindent where $i=1–N$ denotes the index of each discretized slice of the CTN layer in the radial direction, and $N$ is the total number of radial partitions.
+\noindent where $i=1$–$N$ denotes the index of each discretized slice of the CTN layer in the radial direction, and $N$ is the total number of radial partitions.
 
 Solving $\mathbf{x}$ vector can calculate the total $N+2$ potential parameters.
 
@@ -134,7 +130,7 @@ Furthermore, \eqref{b} indicates that $\mathbf{b}(\Delta Q_i, V_\text{G} - V_\te
 
 
 \subsection{Q - $\Delta V_\text{th}$ Relation}
-For the $\Delta V_\text{th}$ calculation, the gate voltage difference required to maintain equal channel field conditions must be determined.
+For the $\Delta V_\text{th}$ calculation, the gate voltage difference required to maintain equal channel field conditions must be determined~\cite{Amoroso.TED,Jin.TED2025}.
 \begin{equation}
     F_\mathrm{TOX}(r_\text{Si}) = \frac{K_\mathrm{TOX}}{\epsilon_\mathrm{TOX}} \frac{1}{r_\text{Si}}
 \end{equation}
@@ -170,7 +166,7 @@ Therefore, establishing following equation and solving for $\Delta V_\text{th}$ 
     \therefore \Delta V_\text{th} = -\det \left[A_{\mathbf{b}(\Delta Q_i,0)}\right]
 \end{equation}
 
-The threshold voltage difference can be calculated with single determinant computation with initially programmed trapped charge distribution is given as Fig.~1(d).
+The threshold voltage difference can be calculated with single determinant computation with initially programmed trapped charge distribution is given as Fig.~1(b).
 
 
 \begin{table}[t!]
@@ -181,22 +177,25 @@ The threshold voltage difference can be calculated with single determinant compu
 \begin{tabular}{@{}lll@{}}
 \toprule
 \textbf{Symbol}                 & \textbf{Physical meaning}             & \textbf{Value} \\ \midrule
-$r_f$                           & Oxide filler radius                   & 20~nm \cite{b13}                          \\ 
-$t_{Si}$                        & Si-channel thickness                  & 8~nm \cite{b13}                           \\
-$t_\mathrm{TOX}$      & Tunneling oxide thickness           & 5~nm \cite{b13}                     \\
-$t_\mathrm{CTN}$                       & Charge trap nitride thickness         & 6~nm \cite{b13}                           \\
-$t_\mathrm{BOX}$                       & Blocking oxide thickness              & 8~nm \cite{b13}                           \\
-$\varepsilon_\text{ox}$              & Oxide permittivity                    & 3.9~$\varepsilon_0$ \cite{b14}             \\
-$\varepsilon_\mathrm{CTN}$             & Charge trap nitride permittivity      & 7.5~$\varepsilon_0$ \cite{b14}             \\
-$\Delta\Phi_\mathrm{Si-ox}$                     & Si-ox layer energy barrier height               & 3.1~eV \cite{b13}                         \\
-$\Delta\Phi_\mathrm{CTN-ox}$                   & CTN-ox layer energy barrier height & 1~eV \cite{b13}                         \\
-$\Delta\Phi_\mathrm{WL-ox}$                    & WL-ox layer energy barrier height            & 3.65~eV \cite{b13}                         \\
-$m^*_\mathrm{ox}$                      & The effective mass of oxide           & 0.5~$m_0$ \cite{b14}                       \\
-$m^*_\mathrm{n}$                       & The effective mass of nitride         & 0.4~$m_0$ \cite{b14}                       \\
-$\sigma_\mathrm{n}$                    & electron capture cross section  & $1 \times 10^{-16}$ cm$^{2}$ \cite{Verr}\\
-$\mu_\mathrm{n, h}$                    & carrier mobility  & $1 \times 10^{-4}$ cm$^{2} / \mathrm{V} \cdot \mathrm{s}$ \cite{Verr}\\
-$V_\text{pass}$                 & Pass voltage for untarget cell                        & 7.0~V  \cite{b13}           \\
+$r_f$                           & Oxide filler radius                   & 20~nm \cite{Jo.TED2025}                          \\ 
+$t_{Si}$                        & Si-channel thickness                  & 8~nm \cite{Jo.TED2025}                           \\
+$t_\mathrm{TOX}$      & Tunneling oxide thickness           & 5~nm \cite{Jo.TED2025}                     \\
+$t_\mathrm{CTN}$                       & Charge trap nitride thickness         & 6~nm \cite{Jo.TED2025}                           \\
+$t_\mathrm{BOX}$                       & Blocking oxide thickness              & 8~nm \cite{Jo.TED2025}                           \\
+$\varepsilon_\text{ox}$              & Oxide permittivity                    & 3.9~$\varepsilon_0$ \cite{Padovani.TED2011}             \\
+$\varepsilon_\mathrm{CTN}$             & Charge trap nitride permittivity      & 7.5~$\varepsilon_0$ \cite{Padovani.TED2011}             \\
+$\Delta\Phi_\mathrm{Si-ox}$                     & Si-ox layer energy barrier height               & 3.1~eV \cite{Padovani.TED2011}                         \\
+$\Delta\Phi_\mathrm{CTN-ox}$                   & CTN-ox layer energy barrier height & 1~eV \cite{Padovani.TED2011}                         \\
+$\Delta\Phi_\mathrm{WL-ox}$                    & WL-ox layer energy barrier height            & 3.65~eV \cite{Padovani.TED2011}                         \\
+$m^*_\mathrm{ox}$                      & The effective mass of oxide           & 0.5~$m_0$ \cite{Padovani.TED2011}                       \\
+$m^*_\mathrm{n}$                       & The effective mass of nitride         & 0.4~$m_0$ \cite{Padovani.TED2011}                       \\
+$\sigma_\mathrm{n}$                    & electron capture cross section  & $1 \times 10^{-16}$ cm$^{2}$ \cite{Verreck.IEDM}\\
+$\mu_\mathrm{n, h}$                    & carrier mobility  & $1 \times 10^{-4}$ cm$^{2} / \mathrm{V} \cdot \mathrm{s}$ \cite{Jo.TED2025}\\
+$V_\text{pass}$                 & Pass voltage for untarget cell                        & 7.0~V  \cite{Jo.TED2025}           \\
 $V_\text{pgm\_1}$               & Program voltage for $\Delta {V}_\text{th}$ = 1~V & 19.6~V             \\
+$V_\text{G}$               & Gate potential under retention operation & 0~V             \\
+$V_\text{ch}$               & Channel potential under  & -1~V ($\approx -\Delta V_\text{th}$) \cite{Jin.TED2025}             \\
+
 
 \bottomrule
 \end{tabular}
@@ -205,7 +204,7 @@ $V_\text{pgm\_1}$               & Program voltage for $\Delta {V}_\text{th}$ = 1
 
 
 \subsection{Autonomous Detrapping Modeling}
-With the given initial conditions, an autonomous equation is established for each cell, divided by radial position and trap depth as shown in Fig.~1(e).
+With the given initial conditions, an autonomous equation is established for each cell, divided by radial position and trap depth as shown in Fig.~2(b).
 \begin{equation}
     \frac{d}{dt}{n_t}(r, E_t, t) = -(e_\text{ch} + e_\text{WL}){n_t}(r, E_t, t)
 \end{equation}
@@ -221,13 +220,13 @@ The emission rate for trapped electron and hole can be computed as following equ
     e = \nu \times \left|TC\right|
 \end{equation}
 \begin{equation}
-    \nu = \frac{2 \pi}{\hbar} \left|E_t\right|^2 V_\text{trap} \cdot \frac{m*\sqrt{2m*}}{\pi^2 \hbar^3}\sqrt{E-E_\text{trap}}
+    \nu = \frac{2 \pi}{\hbar} \left|E_t\right|^2 V_\text{trap} \cdot \frac{m_0\sqrt{2m^*}}{\pi^2 \hbar^3}\sqrt{E-E_\text{trap}}
 \end{equation}
 \begin{equation}
-    \left|TC\right| = \prod \exp{\frac{4\sqrt{2m^*}}{3\hbar q} \frac{\Phi_H^{1.5} - \Phi_L^{1.5}}{F}}
+    \left|TC\right| = \prod \exp{\left(-\frac{4\sqrt{2m^*}}{3\hbar q} \frac{\Phi_H^{1.5} - \Phi_L^{1.5}}{F}\right)}
 \end{equation}
 
-\noindent for both channel and wordline directions as demonstrated in Fig.~1(a).
+\noindent for both channel and wordline directions as demonstrated in Fig.~2(b).
 
 This autonomous detrapping modeling methodology enables a simulation to directly comput the result at a specific time without performing any transient time-interval calculations.
 Only the initial condition and the target time are required, eliminating the need for time-stepped simulations.
@@ -246,41 +245,43 @@ To properly focus on the detrapping effect from the CTN layer, bandgap-engineere
 
 Following the erase operation, a program voltage of $1~\mu\mathrm{s}$ was applied to all wordlines as listed in Table~1. 
 Note that $\Delta V_\text{th}$ represents the threshold voltage shift from the virgin cell state, which starts from a negative value in the erased state.
+Note that to ignore lateral migration retention loss, neighboring data pattern was selected~\cite{Chou.IEDM2023}.
 
 According to Refaldi~et.al~\cite{Refaldi.IRPS2025}, cryogenic conditions enable separation of the detrapping mechanism. 
 To emulate cryogenic conditions during retention operation within the TCAD framework, the capture cross-section was adjusted to an extremely low value ($\sigma_\mathrm{n} \rightarrow 0$) only during retention. 
 This manipulation suppresses thermal electron transitions between trapped and conduction states within the CTN layer, as illustrated in Fig.~2(a), while maintaining physical consistency in other operations.
 
-The simulation setup began with an erase operation that fully filled the CTN layer with holes using sufficient erase time~\cite{Malavena.TCAD2021, Kim.IEDM2025}. 
 First, validation was conducted over a time span extending to 10~years, as shown in Fig.~2(a). 
 The proposed model from the previous section matches the reference TCAD simulation with less than 1\% weighted mean absolute percentage error (WMAPE).
 
-Validation of the autonomous modeling is presented in Fig.~2(c). 
-Retention loss over time alters the band diagram; however, even with multiple refresh cycles, the autonomous model exhibits very small errors compared to full TCAD simulation, achieving less than 1\% WMAPE. 
-Thus, the autonomous simulation significantly reduces computational resources and improves calculation efficiency.
 
 \section{Conclusion}
 This study presents an autonomous model for retention loss due to detrapping of trapped electrons. 
-Compared to TCAD simulations calibrated with physical parameters from various prior studies, the proposed model demonstrates high accuracy with weighted mean absolute percentage error (WMAPE) below 1\%. 
+Compared to TCAD simulations calibrated with physical parameters from various prior studies, the proposed model demonstrates good match with TCAD simulation. 
 Additionally, the novelty of autonomous modeling is demonstrated through significant computational optimization, achieving results within an extremely short timeframe.
 
 
 \newpage
 \begin{thebibliography}{00}
 
-\bibitem{Jin.TED2025} G. O. Young, ``Synthetic structure of industrial plastics,'' in \emph{Plastics,} 2\textsuperscript{nd} ed., vol. 3, J. Peters, Ed. New York, NY, USA: McGraw-Hill, 1964, pp. 15--64.
+\bibitem{agoda} A. Goda, K. K. Muchherla and P. Feeley, "Reliability of 3D NAND Flash for Future Storage Systems (Invited)," 2023 IEEE International Reliability Physics Symposium (IRPS), Monterey, CA, USA, 2023, pp. 1-10, doi: 10.1109/IRPS48203.2023.10118280.
 
 \bibitem{Refaldi.IRPS2025} D. G. Refaldi, G. Malavena, L. Chiavarone, N. Gagliazzi, A. S. Spinelli and C. M. Compagnoni, "Cryogenic Investigation of Vertical Charge Loss in 3D NAND Flash Memories," 2025 IEEE International Reliability Physics Symposium (IRPS), Monterey, CA, USA, 2025, pp. 1-7, doi: 10.1109/IRPS48204.2025.10983672.
 
+\bibitem{Jin.TED2025} M. Jin and H. Shin, "Modeling Attempt-to-Escape Frequency: Tunneling Emission of Trapped Electrons in Tunneling Oxides of 3-D NAND Flash Memory," in IEEE Transactions on Electron Devices, vol. 72, no. 9, pp. 4884-4889, Sept. 2025, doi: 10.1109/TED.2025.3589340.
+
+\bibitem{Amoroso.TED} S. M. Amoroso, C. Monzio Compagnoni, A. Mauri, A. Maconi, A. S. Spinelli and A. L. Lacaita, "Semi-Analytical Model for the Transient Operation of Gate-All-Around Charge-Trap Memories," in IEEE Transactions on Electron Devices, vol. 58, no. 9, pp. 3116-3123, Sept. 2011, doi: 10.1109/TED.2011.2159010.
+
 \bibitem{Jo.TED2025} H. Jo and H. Shin, "Compact Modeling of Trap-Assisted Tunneling Current in 3-D NAND Flash Memory," in IEEE Transactions on Electron Devices, vol. 72, no. 4, pp. 1745-1749, April 2025, doi: 10.1109/TED.2025.3541603.
 
-\bibitem{b2} W.-K. Chen, \emph{Linear Networks and Systems.} Belmont, CA, USA: Wadsworth, 1993, pp. 123--135.
 
-\bibitem{b3} J. U. Duncombe, ``Infrared navigation---Part I: An assessment of feasibility,'' \emph{IEEE Trans. Electron Devices}, vol. ED-11, no. 1, pp. 34--39, Jan. 1959, 10.1109/TED.2016.2628402.
+\bibitem{Padovani.TED2011} A. Padovani et al., "A Comprehensive Understanding of the Erase of TANOS Memories Through Charge Separation Experiments and Simulations," in IEEE Transactions on Electron Devices, vol. 58, no. 9, pp. 3147-3155, Sept. 2011, doi: 10.1109/TED.2011.2159722.
 
-\bibitem{b4} E. P. Wigner, ``Theory of traveling-wave optical laser,'' \emph{Phys. Rev}., vol. 134, pp. A635--A646, Dec. 1965.
+\bibitem{Verreck.IEDM} D. Verreck et al., "Understanding the ISPP Slope in Charge Trap Flash Memory and its Impact on 3-D NAND Scaling," 2021 IEEE International Electron Devices Meeting (IEDM), San Francisco, CA, USA, 2021, pp. 1-4, doi: 10.1109/IEDM19574.2021.9720506.
 
-\bibitem{b5} E. H. Miller, ``A note on reflector arrays,'' \emph{IEEE Trans. Antennas Propagat}., to be published.
+\bibitem{TCADmanual.2022} TCAD Sentaurus Device User Guide Version 2022, Synopsys, Mountain View, CA, USA, Mar. 2022.
+
+\bibitem{Chou.IEDM2023} Y. L. Chou, C. C. Lu, W. J. Tsai, T. C. Lu, K. C. Chen and C. Y. Lu, "A Target-Read Retry Scheme for 3D Charge Trap NAND Flash Memory," 2023 International Electron Devices Meeting (IEDM), San Francisco, CA, USA, 2023, pp. 1-4, doi: 10.1109/IEDM45741.2023.10413738.
 
 
 
