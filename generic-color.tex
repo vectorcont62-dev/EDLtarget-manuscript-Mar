@@ -18,7 +18,7 @@
 \markboth{\journalname, VOL. XX, NO. XX, XXXX 2017}
 {Author \MakeLowercase{\textit{et al.}}: Preparation of Papers for IEEE TRANSACTIONS and JOURNALS (February 2017)}
 \begin{document}
-\title{Autonomous Physics-Based Modeling of Retention Loss in Cryogenic 3-D NAND Flash Memories}\author{Myung Jin, Haechan Choi, and Hyungcheol Shin, \IEEEmembership{Senior Member, IEEE}
+\title{Autonomous Physics-Based Modeling of Retention Loss in Cryogenic 3-D NAND Flash}\author{Myung Jin, Haechan Choi, and Hyungcheol Shin, \IEEEmembership{Senior Member, IEEE}
 \thanks{This paragraph of the first footnote will contain the date on 
 which you submitted your paper for review. (\textit{Corresponding Author: Myung Jin; Hyungcheol Shin.}) }
 \thanks{Myung Jin and Haechan Choi are with the Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea (e-mail: gsjb1028@snu.ac.kr).}
@@ -237,23 +237,22 @@ Only the initial condition and the target time are required, eliminating the nee
 \begin{figure}
     \label{fig2}
     \includegraphics[width=0.5\textwidth]{fig2.png}
-    \caption{Concept of autonomous modeling simulation requiring (a) only initial information to produce (b) results matching cryogenic-like TCAD simulations.}
+    \caption{(a) The TCAD simulation calibration with the measurement from previous study~\cite{Refaldi.IRPS2025}.
+    (b) A detail detrapping curve variation over time with $t_\text{TOX}$ from 3~nm to 5~nm.}
 \end{figure}
-
-The model validation is performed using Synopsys TCAD simulations calibrated against previous retention modeling studies~\cite{Jo.TED2025, Jin.TED2025}. 
-To properly focus on the detrapping effect from the CTN layer, bandgap-engineered processes were neglected, and operating conditions such as program voltage were recalibrated for this study.
-
-Following the erase operation, a program voltage of $1~\mu\mathrm{s}$ was applied to all wordlines as listed in Table~1. 
-Note that $\Delta V_\text{th}$ represents the threshold voltage shift from the virgin cell state, which starts from a negative value in the erased state.
-Note that to ignore lateral migration retention loss, neighboring data pattern was selected~\cite{Chou.IEDM2023}.
 
 According to Refaldi~et.al~\cite{Refaldi.IRPS2025}, cryogenic conditions enable separation of the detrapping mechanism. 
 To emulate cryogenic conditions during retention operation within the TCAD framework, the capture cross-section was adjusted to an extremely low value ($\sigma_\mathrm{n} \rightarrow 0$) only during retention. 
 This manipulation suppresses thermal electron transitions between trapped and conduction states within the CTN layer, as illustrated in Fig.~2(a), while maintaining physical consistency in other operations.
 
-First, validation was conducted over a time span extending to 10~years, as shown in Fig.~2(a). 
-The proposed model from the previous section matches the reference TCAD simulation with less than 1\% weighted mean absolute percentage error (WMAPE).
 
+The model validation is performed using Synopsys TCAD simulations calibrated against previous retention modeling studies~\cite{Jo.TED2025, Jin.TED2025}. 
+To properly focus on the detrapping effect from the CTN layer, bandgap-engineered processes were neglected and program operation was perfomed with fresh cell.
+The simulation was perfomed with virgin cell with program voltage of $1~\mu s$ applied to the target wordline.
+To ignore lateral migration retention loss, neighboring data pattern was selected~\cite{Chou.IEDM2023}.
+
+The variation of the $t_{ox}$ showed the most dominancy in detrapping time transient curve.
+In Fig.~2 (b), $t_{ox}$ from 3~nm to 5~nm for both TCAD simulation and the model were perfomed, showing good match with each other.
 
 \section{Conclusion}
 This study presents an autonomous model for retention loss due to detrapping of trapped electrons. 
