@@ -143,24 +143,24 @@ By Cramer's rule, the $K_\mathrm{TOX}$ parameter can be solved through determina
 
 \noindent where notation $A_{\mathbf{b}(\Delta Q_i,\Delta V_\text{th})}$ stands for $1^\text{st}$ column of matrix $A$ replaced with vector $\mathbf{b}(\Delta Q_i , \Delta V_\text{th})$.
 
-Therefore, establishing following equation and solving for $\Delta V_\text{th}$ is needed to calculate the value.
+Therefore, $\Delta V_\text{th}$ can be solved easily by using the property of multilinearity.
+
 \begin{equation}
     \label{double.Det}
-    \det \left[A_{\mathbf{b}(0,\Delta V_\text{th})}\right] = \det \left[A_{\mathbf{b}(\Delta Q_i,0)}\right]
+    \det \left[A_{\mathbf{b}(0,\Delta V_\text{th})}\right] = -\Delta V_\text{th}  = \det \left[A_{\mathbf{b}(\Delta Q_i,0)}\right]
 \end{equation}
 
-\noindent by property of multilinearity, $\det \left[A_{\mathbf{b}(0,\Delta V_\text{th})}\right]$ in equation~(\ref{double.Det}) can be calculated as following.
-\begin{equation}
-    \det \begin{bmatrix}
-0 & -1 & 0  & \cdots & 0 & 0 \\
-0 & 1 & -1 & \cdots & 0 & 0 \\
-\vdots & & & \ddots  & & \vdots \\
-0 & 0 & 0 & \cdots & 1 & -1 \\
-\Delta V_\text{th} & \frac{2\pi}{C_1} & \frac{2\pi}{C_2} &
-\cdots & \frac{2\pi}{C_N} & \frac{2\pi}{C_{\mathrm{BOX}}}
-    \end{bmatrix}
-     = -\Delta V_\text{th}
-\end{equation}
+% \begin{equation}
+%     \det \begin{bmatrix}
+% 0 & -1 & 0  & \cdots & 0 & 0 \\
+% 0 & 1 & -1 & \cdots & 0 & 0 \\
+% \vdots & & & \ddots  & & \vdots \\
+% 0 & 0 & 0 & \cdots & 1 & -1 \\
+% \Delta V_\text{th} & \frac{2\pi}{C_1} & \frac{2\pi}{C_2} &
+% \cdots & \frac{2\pi}{C_N} & \frac{2\pi}{C_{\mathrm{BOX}}}
+%     \end{bmatrix}
+%      = -\Delta V_\text{th}
+% \end{equation}
 
 \begin{equation}
     \therefore \Delta V_\text{th} = -\det \left[A_{\mathbf{b}(\Delta Q_i,0)}\right]
@@ -169,38 +169,47 @@ Therefore, establishing following equation and solving for $\Delta V_\text{th}$ 
 The threshold voltage difference can be calculated with single determinant computation with initially programmed trapped charge distribution is given as Fig.~1(b).
 
 
-\begin{table}[t!]
-\caption{PARAMETER VALUES FOR THE TCAD SIMULATION}\label{tab:parameters}
-\centering
-\scriptsize 
-%\small
-\begin{tabular}{@{}lll@{}}
-\toprule
-\textbf{Symbol}                 & \textbf{Physical meaning}             & \textbf{Value} \\ \midrule
-$r_f$                           & Oxide filler radius                   & 20~nm \cite{Jo.TED2025}                          \\ 
-$t_{Si}$                        & Si-channel thickness                  & 8~nm \cite{Jo.TED2025}                           \\
-$t_\mathrm{TOX}$      & Tunneling oxide thickness           & 5~nm \cite{Jo.TED2025}                     \\
-$t_\mathrm{CTN}$                       & Charge trap nitride thickness         & 6~nm \cite{Jo.TED2025}                           \\
-$t_\mathrm{BOX}$                       & Blocking oxide thickness              & 8~nm \cite{Jo.TED2025}                           \\
-$\varepsilon_\text{ox}$              & Oxide permittivity                    & 3.9~$\varepsilon_0$ \cite{Padovani.TED2011}             \\
-$\varepsilon_\mathrm{CTN}$             & Charge trap nitride permittivity      & 7.5~$\varepsilon_0$ \cite{Padovani.TED2011}             \\
-$\Delta\Phi_\mathrm{Si-ox}$                     & Si-ox layer energy barrier height               & 3.1~eV \cite{Padovani.TED2011}                         \\
-$\Delta\Phi_\mathrm{CTN-ox}$                   & CTN-ox layer energy barrier height & 1~eV \cite{Padovani.TED2011}                         \\
-$\Delta\Phi_\mathrm{WL-ox}$                    & WL-ox layer energy barrier height            & 3.65~eV \cite{Padovani.TED2011}                         \\
-$m^*_\mathrm{ox}$                      & The effective mass of oxide           & 0.5~$m_0$ \cite{Padovani.TED2011}                       \\
-$m^*_\mathrm{n}$                       & The effective mass of nitride         & 0.4~$m_0$ \cite{Padovani.TED2011}                       \\
-$\sigma_\mathrm{n}$                    & electron capture cross section  & $1 \times 10^{-16}$ cm$^{2}$ \cite{Verreck.IEDM}\\
-$\mu_\mathrm{n, h}$                    & carrier mobility  & $1 \times 10^{-4}$ cm$^{2} / \mathrm{V} \cdot \mathrm{s}$ \cite{Jo.TED2025}\\
-$V_\text{pass}$                 & Pass voltage for untarget cell                        & 7.0~V  \cite{Jo.TED2025}           \\
-$V_\text{pgm\_1}$               & Program voltage for $\Delta {V}_\text{th}$ = 1~V & 19.6~V             \\
-$V_\text{G}$               & Gate potential under retention operation & 0~V             \\
-$V_\text{ch}$               & Channel potential under  & -1~V ($\approx -\Delta V_\text{th}$) \cite{Jin.TED2025}             \\
+% \begin{table}[t!]
+% \caption{PARAMETER VALUES FOR THE TCAD SIMULATION}\label{tab:parameters}
+% \centering
+% \scriptsize 
+% %\small
+% \begin{tabular}{@{}lll@{}}
+% \toprule
+% \textbf{Symbol}                 & \textbf{Physical meaning}             & \textbf{Value} \\ \midrule
+% % $r_f$                           & Oxide filler radius                   & 20~nm \cite{Jo.TED2025}                          \\ 
+% % $t_{Si}$                        & Si-channel thickness                  & 8~nm \cite{Jo.TED2025}                           \\
+% % $t_\mathrm{TOX}$      & Tunneling oxide thickness           & 5~nm \cite{Jo.TED2025}                     \\
+% % $t_\mathrm{CTN}$                       & Charge trap nitride thickness         & 6~nm \cite{Jo.TED2025}                           \\
+% % $t_\mathrm{BOX}$                       & Blocking oxide thickness              & 8~nm \cite{Jo.TED2025}                           \\
+% % $\varepsilon_\text{ox}$              & Oxide permittivity                    & 3.9~$\varepsilon_0$ \cite{Padovani.TED2011}             \\
+% % $\varepsilon_\mathrm{CTN}$             & Charge trap nitride permittivity      & 7.5~$\varepsilon_0$ \cite{Padovani.TED2011}             \\
+% % $\Delta\Phi_\mathrm{Si-ox}$                     & Si-ox layer energy barrier height               & 3.1~eV \cite{Padovani.TED2011}                         \\
+% % $\Delta\Phi_\mathrm{CTN-ox}$                   & CTN-ox layer energy barrier height & 1~eV \cite{Padovani.TED2011}                         \\
+% % $\Delta\Phi_\mathrm{WL-ox}$                    & WL-ox layer energy barrier height            & 3.65~eV \cite{Padovani.TED2011}                         \\
+% % $m^*_\mathrm{ox}$                      & The effective mass of oxide           & 0.5~$m_0$ \cite{Padovani.TED2011}                       \\
+% % $m^*_\mathrm{n}$                       & The effective mass of nitride         & 0.4~$m_0$ \cite{Padovani.TED2011}                       \\
+% % $\sigma_\mathrm{n}$                    & electron capture cross section  & $1 \times 10^{-16}$ cm$^{2}$ \cite{Verreck.IEDM}\\
+% % $\mu_\mathrm{n, h}$                    & carrier mobility  & $1 \times 10^{-4}$ cm$^{2} / \mathrm{V} \cdot \mathrm{s}$ \cite{Jo.TED2025}\\
+% % $V_\text{pass}$                 & Pass voltage for untarget cell                        & 7.0~V  \cite{Jo.TED2025}           \\
+% % $V_\text{pgm\_1}$               & Program voltage for $\Delta {V}_\text{th}$ = 1~V & 19.6~V             \\
+% % $V_\text{G}$               & Gate potential under retention operation & 0~V             \\
+% % $V_\text{ch}$               & Channel potential under  & -1~V ($\approx -\Delta V_\text{th}$) \cite{Jin.TED2025}             \\
 
 
-\bottomrule
-\end{tabular}
-\label{table1}
-\end{table}
+% \bottomrule
+% \end{tabular}
+% \label{table1}
+% \end{table}
+
+
+
+\begin{figure}[t!]
+    \label{fig2}
+    \includegraphics[width=0.5\textwidth]{fig2.png}
+    \caption{(a) The TCAD simulation calibration with the measurement from previous study~\cite{Refaldi.IRPS2025}.
+    (b) A detail detrapping curve variation over time with $t_\text{TOX}$ from 3~nm to 5~nm.}
+\end{figure}
 
 
 \subsection{Autonomous Detrapping Modeling}
@@ -235,8 +244,8 @@ Only the initial condition and the target time are required, eliminating the nee
 
 
 \begin{figure}
-    \label{fig2}
-    \includegraphics[width=0.5\textwidth]{fig2.png}
+    \label{fig3}
+    \includegraphics[width=0.5\textwidth]{fig3.png}
     \caption{(a) The TCAD simulation calibration with the measurement from previous study~\cite{Refaldi.IRPS2025}.
     (b) A detail detrapping curve variation over time with $t_\text{TOX}$ from 3~nm to 5~nm.}
 \end{figure}
