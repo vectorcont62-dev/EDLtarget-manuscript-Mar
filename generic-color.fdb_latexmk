@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1773816234.87995 "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/generic-color.tex" "generic-color.pdf" "generic-color" 1773816238.21623 0
+["pdflatex"] 1777479566.61278 "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/generic-color.tex" "generic-color.pdf" "generic-color" 1777479568.9234 0
   "C:/Users/joshs/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1772012967 83609 ebbc432e6cbbb238d39535255db2c8bd ""
   "C:/Users/joshs/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757667307 13257343 b5e7d33c22ebfb1f6f80b4a61e987b92 ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -147,13 +147,13 @@
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/tex/latex/ulem/ulem.sty" 1578651445 15682 94f55b803e160cf7fb6e4d77d07cfe1d ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "LOGO-generic-web.eps" 1772760465 98268 991288daab2defa3899e7c0d849884be ""
-  "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/generic-color.tex" 1773810150 18239 abfff17a9979f9d536aa51a4fb81659c ""
+  "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/generic-color.tex" 1777479565 18578 da7272eada9c86ff7cbbb89352c14124 ""
   "fig1.png" 1773807358 103031 258297250d07a90596d44006926811c6 ""
   "fig2.png" 1773809640 70662 d11e5a229b7e26315ea640a29c0e1410 ""
-  "fig3.png" 1773816228 114967 42e07e4a1423b3dd3fbcdf83ba89bafe ""
-  "generic-color.aux" 1773816237 3299 72f0d00f548900f4f6fc72a7b20c5055 "pdflatex"
-  "generic-color.out" 1773816237 1074 d5683fadb5c59152223d1bce91336c67 "pdflatex"
-  "generic-color.tex" 1773810150 18239 abfff17a9979f9d536aa51a4fb81659c ""
+  "fig3.png" 1777478676 27942 dc71845d0574553085f3325f5791ab69 ""
+  "generic-color.aux" 1777479568 3299 72f0d00f548900f4f6fc72a7b20c5055 "pdflatex"
+  "generic-color.out" 1777479568 1074 d5683fadb5c59152223d1bce91336c67 "pdflatex"
+  "generic-color.tex" 1777479565 18578 da7272eada9c86ff7cbbb89352c14124 ""
   "generic.sty" 1772760465 192 e8d3ecc691fbbb2da183dfc84a675b29 ""
   "ieeecolor.cls" 1772760465 224773 9f9540495f1e1a992a162661c1be18be ""
   (generated)
