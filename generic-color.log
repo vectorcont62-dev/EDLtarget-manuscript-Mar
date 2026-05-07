@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.12)  6 MAY 2026 23:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.12)  7 MAY 2026 11:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -523,7 +523,7 @@ Overfull \vbox (19.674pt too high) has occurred while \output is active []
 
 
  <./LOGO-generic-web-eps-converted-to.pdf>]
-<fig1.png, id=77, 262.362pt x 246.813pt>
+<fig1.png, id=74, 262.362pt x 246.813pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
 Package pdftex.def Info: fig1.png  used on input line 134.
@@ -549,13 +549,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 143.
 
-<fig2.png, id=80, 229.731pt x 254.04pt>
+<fig2.png, id=77, 229.731pt x 254.04pt>
 File: fig2.png Graphic file (type png)
 <use fig2.png>
 Package pdftex.def Info: fig2.png  used on input line 172.
 (pdftex.def)             Requested size: 252.0pt x 278.67734pt.
 
 
+<fig3.png, id=80, 190.53pt x 80.811pt>
+File: fig3.png Graphic file (type png)
+<use fig3.png>
+Package pdftex.def Info: fig3.png  used on input line 214.
+(pdftex.def)             Requested size: 252.0pt x 106.89032pt.
 
 
 [2
@@ -583,14 +588,9 @@ pdfTeX warning: pdflatex: pop empty color page stack 0
 
 pdfTeX warning: pdflatex: pop empty color page stack 0
  <./fig1.png> <./fig2.png>]
-<fig3.png, id=107, 190.53pt x 80.811pt>
-File: fig3.png Graphic file (type png)
-<use fig3.png>
-Package pdftex.def Info: fig3.png  used on input line 214.
-(pdftex.def)             Requested size: 252.0pt x 106.89032pt.
 \width=\dimen265
 
-Overfull \hbox (13.28639pt too wide) in paragraph at lines 244--253
+Overfull \hbox (13.28639pt too wide) in paragraph at lines 245--254
  [][] 
  []
 
@@ -618,15 +618,15 @@ Package rerunfilecheck Info: File `generic-color.out' has not changed.
 Here is how much of TeX's memory you used:
  11623 strings out of 468133
  179479 string characters out of 5430712
- 625791 words of memory out of 5000000
+ 626821 words of memory out of 5000000
  39995 multiletter control sequences out of 15000+600000
  706198 words of font info for 172 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,19n,79p,699b,448s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on generic-color.pdf (3 pages, 467416 bytes).
+ 75i,19n,79p,699b,506s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on generic-color.pdf (3 pages, 442180 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
+ 245 PDF objects out of 1000 (max. 8388607)
  42 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

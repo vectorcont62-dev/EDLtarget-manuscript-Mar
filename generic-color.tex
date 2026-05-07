@@ -35,7 +35,7 @@ which you submitted your paper for review. (\textit{Corresponding Author: Myung 
 We propose a time-step-free physics-based model for detrapping-induced retention loss in cryogenic 3-D NAND flash memory.
 By solving the first-order autonomous detrapping equation in closed form, the proposed model directly evaluates $\Delta V_\text{th}(t)$ from the initially programmed trapped charge distribution without transient time stepping.
 For a fixed number of targeted retention times, the computational cost is independent of the final physical retention time, enabling efficient short- and long-term retention prediction.
-The validation was done by calibrated TCAD simulation to cryogenic condition, which have been achieved by $\sigma_n \rightarrow 0$ due to limitation of TCAD in cryogenic simulation.
+The validation was done by calibrated TCAD simulation to cryogenic condition, which have been achieved by near zero capture cross section due to limitation of TCAD in cryogenic simulation.
 Time-step-free model showed good match to the TCAD simulation.
 \end{abstract}
 
@@ -45,10 +45,10 @@ time-step-free modeling, autonomous ODE, detrapping, 3-D NAND flash memory, rete
 
 \section{Introduction}
 \label{sec:introduction}
-\IEEEPARstart{T}{here} rapid increase in data storage demand, driven by emerging computing technologies such as artificial intelligence (AI) and high-performance computing (HPC), has raised significant concerns about the reliability of 3-D NAND flash memories, particularly regarding retention loss~\cite{agoda}.
+\IEEEPARstart{T}{he} rapid increase in data storage demand, driven by emerging computing technologies such as artificial intelligence (AI) and high-performance computing (HPC), has raised significant concerns about the reliability of 3-D NAND flash memories, particularly regarding retention loss~\cite{agoda}.
 
 As storage capacity per cell increases, ensuring long-term stability of each bit’s threshold voltage distribution over time scales from days to years becomes increasingly critical.
-Moreover, prior works have shown that charge detrapping can still occur at cryogenic temperatures~\cite{Refaldi.IRPS2025}, supporting models that treat detrapping as largely temperature independent~\cite{Jin.TED2025}.
+Moreover, prior works have shown that trapped charge detrapping can still occur at cryogenic temperatures~\cite{Refaldi.IRPS2025}, supporting models that treat detrapping as largely temperature independent~\cite{Jin.TED2025}.
 
 In this study, a time-step-free physics-based model is developed for retention loss based on tunneling emission mechanisms in 3-D NAND flash memory.
 The proposed simulation framework uses the initially programmed trapped charge distribution as input and enables highly efficient computation by using closed-form solution of the autonomous detrapping equation, eliminating sequential transient time stepping.
@@ -178,7 +178,7 @@ The threshold voltage difference can be calculated with single determinant compu
 
 
 \subsection{Time-step-free Detrapping Modeling}
-With the given initial conditions, an autonomous equation is established for each cell, divided by radial position and trap depth.
+With the given initial conditions, an autonomous equation is established for each cell, divided by radial position~($r$) and trap depth~($E_t$).
 \begin{equation}
     \frac{d}{dt}{n_t}(r, E_t, t) = -(e_\text{ch} + e_\text{WL}){n_t}(r, E_t, t)
 \end{equation}
@@ -203,7 +203,7 @@ The emission rate for trapped electron can be computed as following equations ba
 
 \noindent for both channel and wordline directions as demonstrated in Fig.~\ref{fig2}(a).
 
-This autonomous detrapping modeling equation (\ref{autonomousSoluation}) is the key relation that enables a simulation to directly compute the result at a specific time once initially programmed trapped charge distribution is specified.
+This autonomous detrapping equation (\ref{autonomousSoluation}) is the key relation that enables a simulation to directly compute the result at a specific time once initially programmed trapped charge distribution is specified.
 Therefore, for a fixed spatial/energy discretization and a fixed number of evaluated retention times, the computational cost is governed by the number of trap bins rather than by the final physical retention time.
 
 \section{Simulation and Result}
@@ -217,25 +217,26 @@ Therefore, for a fixed spatial/energy discretization and a fixed number of evalu
     \label{fig3}
 \end{figure}
 
-According to Refaldi et.al~\cite{Refaldi.IRPS2025}, cryogenic conditions enable the detrapping component to be isolated from retention loss.
+According to \cite{Refaldi.IRPS2025}, cryogenic conditions enable the detrapping component to be isolated from retention loss.
 However, direct TCAD simulation at cryogenic temperature below 4.2~K condition did not converge reliably in our setup.
-Therefore, to emulate cryogenic conditions during retention operation within the TCAD framework, the capture cross-section was adjusted to an extremely low value ($\sigma_\mathrm{n} \rightarrow 0$) only during retention. 
+Therefore, to emulate cryogenic conditions during retention operation within the TCAD framework, the capture cross section was adjusted to an extremely low value ($\sigma_\mathrm{n} \rightarrow 0$) only during retention. 
 This manipulation suppresses thermal electron transitions between trapped and conduction states within the CTN layer, while maintaining physical consistency in other mechanisms~\cite{TCADmanual.2022}.
 
 The TCAD deck shown in Fig.~\ref{fig2}(c) was calibrated by matching the retention time scale of the measurement in previous study~\cite{Refaldi.IRPS2025}.
-Since $\Delta V_\text{th}$ in~\cite{Refaldi.IRPS2025} is reported in arbitrary units, the calibration was done by matching time scale only.
+Since $\Delta V_\text{th}$ is reported in arbitrary units, the calibration was done by matching time scale only.
 Program operation was performed by single $1~\mu s$ pulse and calibrated to obtain $\Delta V_\text{th} = 1.8~V$.
 
 To properly focus on the detrapping effect from the CTN layer, bandgap-engineered processes were neglected and program operation was perfomed with fresh cell.
 Lateral migration retention loss was ignored by selecting neighboring data pattern~\cite{Chou.IEDM2023}.
 
 The model validation is performed using Synopsys TCAD simulations calibrated against previous retention modeling studies~\cite{Jo.TED2025, Jin.TED2025}. 
+In the model calculation, the trap energy was divided into 100 bins, and the CTN layer was discretized into 30 slices.
 The variation of the $t_{ox}$ showed the most dominancy in detrapping time transient curve.
 In Fig.~\ref{fig3}(b), $t_{ox}$ from 3~nm to 5~nm for both TCAD simulation and the model were perfomed, showing good match with each other.
 
 Table~\ref{MethodComparisons} shows the comparison between TCAD and the model.
-The table shows how much computation time and resource efficiency could be improved through the autonomous model.
-Since autonomous model's computation time is independent from sequential time step, can be adopted to both short and long term retention operation based on given physical time.
+The table shows how much computation time and resource efficiency could be improved through the time-step-free model.
+Since the model's computation time is independent from sequential time step, can be adopted to both short- and long-term retention operation based on given physical time.
 
 \begin{table}[t]
 \caption{Comparison between a TCAD and the autonomous model}
@@ -257,7 +258,7 @@ Property & TCAD & Time-step-free model\\
 \section{Conclusion}
 This study presents a time-step-free physics-based modeling for retention loss due to detrapping of trapped electrons. 
 the novelty of time-step-free modeling is demonstrated through significant computational optimization, achieving runtime independent of final physical time.
-Additionally, compared to TCAD simulations calibrated with physical parameters from various prior studies, the proposed model demonstrates good match with TCAD simulation within extremely short timeframe. 
+Additionally, compared to TCAD simulations calibrated with physical parameters from various prior studies including cryogenic condition, the proposed model demonstrates good match with TCAD simulation within extremely short timeframe. 
 
 \begin{thebibliography}{00}
 
