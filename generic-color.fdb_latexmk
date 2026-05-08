@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1778121656.32084 "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/generic-color.tex" "generic-color.pdf" "generic-color" 1778121658.5391 0
+["pdflatex"] 1778150429.62142 "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/generic-color.tex" "generic-color.pdf" "generic-color" 1778150432.24834 0
   "C:/Users/joshs/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1772012967 83609 ebbc432e6cbbb238d39535255db2c8bd ""
   "C:/Users/joshs/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757667307 13257343 b5e7d33c22ebfb1f6f80b4a61e987b92 ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -60,6 +60,7 @@
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1247596667 37912 07513ec114ac737ab54cea0152f4424b ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1247596667 36281 c355509802a035cadc5f15869451dcee ""
+  "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1247596667 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1247596667 32762 7fee39e011c23b3589931effd97b9702 ""
@@ -148,13 +149,13 @@
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/tex/latex/ulem/ulem.sty" 1578651445 15682 94f55b803e160cf7fb6e4d77d07cfe1d ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "LOGO-generic-web.eps" 1772760465 98268 991288daab2defa3899e7c0d849884be ""
-  "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/generic-color.tex" 1778121652 18038 9c461fda59867189cbe50d2586b31ba7 ""
+  "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/generic-color.tex" 1778150427 18935 6b7cf39860f109bc4614036cc25a77be ""
   "fig1.png" 1778077996 102952 27711e8842b5bf0c93d3cafbe435c271 ""
-  "fig2.png" 1778120232 62918 fd816dcc4c72d8ce5c83083c89a19033 ""
+  "fig2.png" 1778148824 67295 295e28c4cb99ff80cbc93cd6cd72ca53 ""
   "fig3.png" 1778077537 31559 2cbcd444c54a83ec448b1079db1ed6f6 ""
-  "generic-color.aux" 1778121658 4607 8aee8e8896e54432630d229234da2827 "pdflatex"
-  "generic-color.out" 1778121658 1094 b940704454b799530e076d3eb0292739 "pdflatex"
-  "generic-color.tex" 1778121652 18038 9c461fda59867189cbe50d2586b31ba7 ""
+  "generic-color.aux" 1778150431 4521 b604b2d786cdc674bf07ee2ee7c8595e "pdflatex"
+  "generic-color.out" 1778150431 1094 b940704454b799530e076d3eb0292739 "pdflatex"
+  "generic-color.tex" 1778150427 18935 6b7cf39860f109bc4614036cc25a77be ""
   "generic.sty" 1772760465 192 e8d3ecc691fbbb2da183dfc84a675b29 ""
   "ieeecolor.cls" 1772760465 224773 9f9540495f1e1a992a162661c1be18be ""
   (generated)
