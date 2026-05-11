@@ -15,28 +15,26 @@
 \usepackage{soul}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage[switch, pagewise]{lineno}
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 \markboth{\journalname, VOL. XX, NO. XX, XXXX 20XX}
 {Jin \MakeLowercase{\textit{et al.}}: Time-Step-Free Physics-Based Modeling of Retention Loss in Cryogenic 3-D NAND Flash}
 \begin{document}
+\linenumbers
 \IEEEaftertitletext{\vspace{-1cm}} % 제목 밑 공간
 \title{Time-Step-Free Physics-Based Modeling of Retention Loss in Cryogenic 3-D NAND Flash}\author{Myung Jin, Haechan Choi, and Hyungcheol Shin, \IEEEmembership{Senior Member, IEEE}
-\thanks{This paragraph of the first footnote will contain the date on 
-which you submitted your paper for review. (\textit{Corresponding Author: Myung Jin; Hyungcheol Shin.}) }
+\thanks{(\textit{Corresponding Author: Myung Jin; Hyungcheol Shin.}) }
 \thanks{Myung Jin and Haechan Choi are with the Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea (e-mail: gsjb1028@snu.ac.kr).}
 \thanks{Hyungcheol Shin is with the Department of Electrical and Computer Engineering, Seoul National University, Seoul 08826, South Korea, and also with Integra Semiconductor, Ltd., Seoul 06970, South Korea (e-mail: hcshin@snu.ac.kr).}}
 
 \maketitle
-% \vspace{-1cm}
-
-
 \begin{abstract}
-We propose a time-step-free physics-based model for detrapping-induced retention loss in cryogenic 3-D NAND flash memory.
+We propose a time-step-free physics-based model for retention loss in cryogenic 3-D NAND flash memory.
 By solving the first-order autonomous detrapping equation in closed form, the proposed model directly evaluates $\Delta V_\text{th}(t)$ from the initially programmed trapped charge distribution without transient time stepping.
 For a fixed number of targeted retention times, the computational cost is independent of the final physical retention time, enabling efficient short- and long-term retention prediction.
-The validation was done by calibrated TCAD simulation to cryogenic condition, which have been achieved by near zero capture cross section due to limitation of TCAD in cryogenic simulation.
-Time-step-free model showed good match to the TCAD simulation.
+The model is benchmarked against TCAD simulations calibrated to the time scale of reported cryogenic retention data and configured to isolate detrapping loss by suppressing thermally activated transitions during retention.
+It reproduces the TCAD predicted retention transient and tunneling oxide thickness dependence for 3-5~nm while reducing the average runtime from $>$25000~s to $<$4~s.
 \end{abstract}
 
 \begin{IEEEkeywords}
@@ -58,7 +56,7 @@ The proposed simulation framework uses the initially programmed trapped charge d
 
 This section presents the modeling framework for time-step-free simulation of retention loss.
 First, a cylindrical Poisson solution is derived for the oxide–nitride–oxide (O/N/O) gate stack, incorporating quantized multiple layers within the charge trap nitride (CTN) layer.
-After obtaining the detailed Poisson solution for these discretized layers, the threshold voltage shift ($\Delta V_\mathrm{th}$) is calculated using an optimized numerical scheme.
+After obtaining the detailed Poisson solution for these discretized layers, the threshold voltage shift ($\Delta V_\mathrm{th}$) is calculated using a determinant based method.
 Finally, based on previous studies of detrapping-induced emission rates~\cite{Jin.TED2025}, an autonomous equation governing retention loss behavior is proposed.
 
 \subsection{Detailed Poisson Solution}
@@ -247,7 +245,7 @@ To properly focus on the detrapping effect from the CTN layer, bandgap-engineere
 The model validation is performed using Synopsys TCAD simulations calibrated against previous retention modeling studies~\cite{Han.TED2026, Jin.TED2025}. 
 In the model calculation, the trap energy was divided into 100 bins, and the CTN layer was discretized into 30 slices.
 The variation of the $t_\text{TOX}$ showed the most dominancy in detrapping time transient curve.
-In Fig.~\ref{fig3}(b), $t_\text{TOX}$ from 3~nm to 5~nm for both TCAD simulation and the model were perfomed, showing good match with each other.
+In Fig.~\ref{fig3}(b), $t_\text{TOX}$ from 3~nm to 5~nm for both TCAD simulation and the model were performed, showing good match with each other.
 
 Table~\ref{MethodComparisons} shows the comparison between TCAD and the model.
 The table shows how much computation time and resource efficiency could be improved through the time-step-free model.
