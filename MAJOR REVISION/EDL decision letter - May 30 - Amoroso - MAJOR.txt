@@ -1,0 +1,69 @@
+30-May-2026
+
+Dear Mr. Jin:
+
+Your manuscript ID EDL-2026-05-1110 entitled "Time-Step-Free Physics-Based Modeling of Retention Loss in Cryogenic 3-D NAND Flash" has been given extensive consideration by our reviewers. It has been decided that although the work is interesting and may be worthy of eventual publication, the manuscript in its current form cannot be accepted and requires MAJOR REVISIONS. Extensive  revisions or additions, are necessary before re-submission. Enclosed please find the reviewers' and editors’ comments. PLEASE DO NOT RESUBMIT AS AN APPEAL OR AS A NEW PAPER.   
+
+IMPORTANT: Responses to the reviewers’ and editors’ comments must also be submitted. The responses must be in a specific format outlined in the Author Instructions document. Please follow the instructions to avoid unnecessary delays.
+
+When you are ready to submit your paper, please visit the following link:
+
+https://ieee.atyponrex.com/submission/submissionBoard/REX-PROD-2-D8F80A93-D6DC-4761-B728-901049BF0905-19F0F445-5827-4007-8C6E-5263905F0478-71893/current?idtype=external
+
+We hope you will consider re-submitting this work to IEEE Electron Device Letters. Please keep in mind that your work will be given a new date of submittal and will probably be re-reviewed by the same referees. Please address their comments fully however, your final manuscript must not exceed 4 published pages (see attachment for details). Therefore, if considerable amplification is necessary, a full length paper submitted to IEEE Transactions on Electron Devices or IEEE Journal of the Electron Devices Society may be more appropriate.
+
+Once you have uploaded your re-submission you will receive a new manuscript number.
+
+Once again, thank you for submitting your manuscript to the IEEE Electron Device Letters and I look forward to receiving your revision.
+
+Sincerely,
+Dr. Salvatore Amoroso
+Editor, IEEE Electron Device Letters
+samoroso@synopsys.com, Salvatore.amoroso@synopsys.com
+
+Reviewer(s)' Comments to Author:
+
+Reviewer: 1
+
+Comments to Authors
+
+This work presents an interesting and computationally efficient time-step-free modeling approach for cryogenic 3D NAND retention loss, but the current validation appears insufficient to fully support its predictive capability. In particular, the physical validity of emulating cryogenic retention only by reducing σ_n, the error introduced by assuming time-independent emission rates, and the origin/sensitivity of the initial trapped-charge distribution should be clarified. Below are the comments and questions.
+
+Q1. The manuscript states that direct TCAD simulation at 4.2K did not converge and that the electron capture cross section was therefore reduced to an extremely low value during retention to emulate cryogenic operation. However, lowering the temperature to 4.2K should affect not only the capture cross-section but also carrier distribution, fermi occupation, thermal velocity, emission/capture balance, and field-assisted transport parameters. Could the authors justify why only reducing σ_n is sufficient to represent cryogenic retention? If the change in other parameters was also included, please adequately explain it. Please also provide a sensitivity analysis showing whether the retention transient saturates as σ_n is reduced.
+
+Q2. The TCAD benchmark plays a central role in validating the proposed model. Could the authors clarify which physical models were included or suppressed during the retention simulation, including tunneling emission, re-capture, field-assisted emission, thermal emission, and trap-to-trap migration? Without this information, it is difficult to assess whether the TCAD reference represents cryogenic NAND retention physics or only a selected scenario.
+
+Q3. The validation appears to rely primarily on comparison with calibrated TCAD simulations rather than direct experimental retention data. The manuscript also states that the TCAD deck was calibrated by matching only the retention time scale because the experimental VT shift was reported in arbitrary units. In this case, the agreement between the proposed model and TCAD may demonstrate consistency with the selected TCAD assumptions rather than predictive capability for absolute cryogenic retention loss. Could the authors clarify whether the benchmark reproduces experimentally observed VT shift, retention slope, temperature dependence, and programmed-state dependence?
+
+Q4. Does the time-step-free solution assume that ech and eWL remain constant during retention? Considering that the trapped charge density, local potential, e-field, and tunneling barrier profile may change as trapped electrons are emitted, emission rates can be modified. Could the authors provide a more detailed explanation and physical justification for treating the emission rates?
+
+Q5. The proposed model calculates VT(t) from the initially programmed trapped-charge distribution, but the origin of the distribution shown in Fig. 2(b) is not sufficiently clear. Was it obtained from TCAD PGM simulation, and analytical assumption, empirical fitting, or a previous model?
+
+Q6. The model uses 100 trap-energy bins and 30 radial CTN slices. Could the authors provide a convergence test with respect to the number of energy bins and radial slices? Since the emission rate depends exponentially on trap energy and tunneling barrier shape, the predicted retention transient may be sensitive to discretization resolution.
+
+
+Reviewer: 2
+
+Comments to Authors
+
+It is a fair study on simplified simulation of retention loss in CTN based NAND flash.
+The main advantage of the proposed simulation/modelling method, is to shorten the computation time.
+A few questions on the methodology and data validation:
+1. As mentioned in the manuscript, thermal emission de-trapping process across the CTN NAND stack was considered. Is there lateral charge migration process considered in the proposed method, for retention loss?
+2. If lateral charge migration process needs to be taken into account, will the proposed method be able to capture?
+3. The simulation method is using initial programmed charge distribution as starting point. Please help provide more details on how the initial distribution is assumed? Is there another fitting needed by the model to correlate initial charge distribution vs. Vt?
+4. As understood from the study, the proposed method is rather general to simplify the retention loss simulation. Any particular reason to highlight “cryogenic condition”, in manuscript title?
+
+
+Note from Editor to Author:
+ 
+Editor: Amoroso, Salvatore
+
+Thanks for submitting your work to EDL. The manuscript does show elements of novelty, but it has to be rejected in its current form. There are several issues to be addressed and some of them would likely require substantial additional results and discussion beyond the typical scope and length of IEEE EDL. I would like to give the Authors a chance to provide a revised submission for EDL, but this will only go ahead if it can address all the points raised by our Reviewers. If this is not achievable within the EDL constrains, I would strongly recommend the Authors to consider submitting the revised manuscript to IEEE T-ED.
+
+
+Note from Editor-in-Chief to Author:
+
+Please be aware you may now use all of the first three pages for text and figures to address the reviewers’ and editors’ input.   The fourth page remains reserved for references.  
+ 
+I urge you to take into serious consideration the comments from editors and reviewers and thoroughly address them in your revised version. Multiple revisions are not in the spirit of EDL which is dedicated to rapid publication of novel and impactful research. If after due consideration, your revised manuscript still shows significant deficiencies, we might not be able to consider it any further for publication in EDL.
