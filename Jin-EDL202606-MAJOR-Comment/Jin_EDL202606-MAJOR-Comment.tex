@@ -1,0 +1,222 @@
+\documentclass[11pt]{article}
+% \usepackage[left=25mm, right=25mm, top=25mm, bottom=25mm]{geometry}
+\usepackage[left=25mm, right=25mm, top=20mm, bottom=30mm]{geometry}
+\usepackage{times} % type1: times, palatino, helvet, courier, avant, bookman, newcent, charter, chancery
+\usepackage{indentfirst}
+\usepackage{titling}
+\setlength{\droptitle}{-3cm}
+\pretitle{\begin{center}\LARGE}
+\posttitle{\par\end{center}}
+\preauthor{\begin{center}\large}
+\postauthor{\end{center}}
+\predate{\begin{center}\normalsize}
+\postdate{\end{center}\vspace{-10pt}}
+
+\usepackage{graphicx}
+
+
+\usepackage{hyperref} % reference hyperlink
+\usepackage{amsmath} % math
+\usepackage{amssymb} % math symbole (therefore, because, ...)
+\usepackage{cancel} % $$ cancel line package
+\usepackage{xcolor} % color package (highlight etc.)
+\usepackage{ulem} % underline
+\usepackage{soul} % highlight
+
+\begin{document}
+% \title{\textbf{Revision of the Manuscript}\\ \vspace{8pt} \normalsize{Modeling of Attempt-to-Escape Frequency: Tunneling Emission of\\Trapped Electrons in Tunneling Oxides of 3D NAND Flash Memory}\\ \vspace{8pt} \small{(TED-2025-05-1209-R)}}
+% \author{Myung Jin and Hyungcheol Shin}
+% \maketitle
+
+\section*{\normalsize{Authors' responses to the reviews' comments:}}
+
+\section*{\textit{Reviewer \# 1}}
+\subsection*{\textit{Comment \# 1}}
+
+\noindent \textit{Review wrote: }
+
+The manuscript states that direct TCAD simulation at 4.2K did not converge and that the electron capture cross section was therefore reduced to an extremely low value during retention to emulate cryogenic operation.
+However, lowering the temperature to 4.2K should affect not only the capture cross-section but also carrier distribution, fermi occupation, thermal velocity, emission/capture balance, and field-assisted transport parameters.
+Could the authors justify why only reducing $\sigma_n$ is sufficient to represent cryogenic retention?
+If the change in other parameters was also included, please adequately explain it.
+Please also provide a sensitivity analysis showing whether the retention transient saturates as $\sigma_n$ is reduced.
+
+\noindent \textit{\\Our response: }
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3} - B}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Column 2 at Page 4}
+
+\hspace{40pt} \noindent \textit{Figure\#: - }
+
+\subsection*{\textit{Comment \# 2}}
+
+\noindent \textit{Review wrote: }
+
+The TCAD benchmark plays a central role in validating the proposed model.
+Could the authors clarify which physical models were included or suppressed during the retention simulation, including tunneling emission, re-capture, field-assisted emission, thermal emission, and trap-to-trap migration?
+Without this information, it is difficult to assess whether the TCAD reference represents cryogenic NAND retention physics or only a selected scenario.
+
+\noindent \textit{\\Our response: }
+
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3} - B}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Column 1 \& 2 on Page 4}
+
+\hspace{40pt} \noindent \textit{Figure\#: - }
+
+\subsection*{\textit{Comment \# 3}}
+
+\noindent \textit{Review wrote: }
+
+The validation appears to rely primarily on comparison with calibrated TCAD simulations rather than direct experimental retention data.
+The manuscript also states that the TCAD deck was calibrated by matching only the retention time scale because the experimental VT shift was reported in arbitrary units.
+In this case, the agreement between the proposed model and TCAD may demonstrate consistency with the selected TCAD assumptions rather than predictive capability for absolute cryogenic retention loss.
+Could the authors clarify whether the benchmark reproduces experimentally observed VT shift, retention slope, temperature dependence, and programmed-state dependence?
+
+\noindent \textit{\\Our response: }
+
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3} - B}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Column 1 \& 2 on Page 4}
+
+\hspace{40pt} \noindent \textit{Figure\#: - }
+
+
+\subsection*{\textit{Comment \# 4}}
+
+\noindent \textit{Review wrote: }
+
+Does the time-step-free solution assume that ech and eWL remain constant during retention?
+Considering that the trapped charge density, local potential, e-field, and tunneling barrier profile may change as trapped electrons are emitted, emission rates can be modified.
+Could the authors provide a more detailed explanation and physical justification for treating the emission rates?
+
+\noindent \textit{\\Our response: }
+
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3} - B}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Column 1 \& 2 on Page 4}
+
+\hspace{40pt} \noindent \textit{Figure\#: - }
+
+\subsection*{\textit{Comment \# 5}}
+
+\noindent \textit{Review wrote: }
+
+The proposed model calculates VT(t) from the initially programmed trapped-charge distribution, but the origin of the distribution shown in Fig. 2(b) is not sufficiently clear.
+Was it obtained from TCAD PGM simulation, and analytical assumption, empirical fitting, or a previous model?
+
+\noindent \textit{\\Our response: }
+
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3} - B}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Column 1 \& 2 on Page 4}
+
+\hspace{40pt} \noindent \textit{Figure\#: - }
+
+\subsection*{\textit{Comment \# 6}}
+
+\noindent \textit{Review wrote: }
+
+\noindent \textit{\\Our response: }
+
+The model uses 100 trap-energy bins and 30 radial CTN slices.
+Could the authors provide a convergence test with respect to the number of energy bins and radial slices?
+Since the emission rate depends exponentially on trap energy and tunneling barrier shape, the predicted retention transient may be sensitive to discretization resolution.
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3} - B}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Column 1 \& 2 on Page 4}
+
+\hspace{40pt} \noindent \textit{Figure\#: - }
+
+\newpage
+
+\section*{\normalsize{Authors' responses to the reviews' comments:}}
+
+\section*{\textit{Reviewer \# 2}}
+\subsection*{\textit{Comment \# 1}}
+
+\noindent \textit{Review wrote: }
+
+As mentioned in the manuscript, thermal emission de-trapping process across the CTN NAND stack was considered.
+Is there lateral charge migration process considered in the proposed method, for retention loss?
+
+\noindent \textit{\\Our response: }
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: -}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Fig. 1 on Page 1}
+
+\hspace{40pt} \noindent \textit{Figure\#: Fig. 1(d) added }
+
+\subsection*{\textit{Comment \# 2}}
+
+\noindent \textit{Review wrote: }
+
+If lateral charge migration process needs to be taken into account, will the proposed method be able to capture?
+
+\noindent \textit{\\Our response: }
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 2} - A}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Column 1 on Page 2}
+
+\hspace{40pt} \noindent \textit{Figure\#: - }
+
+\subsection*{\textit{Comment \# 3}}
+
+\noindent \textit{Review wrote: }
+
+The simulation method is using initial programmed charge distribution as starting point.
+Please help provide more details on how the initial distribution is assumed?
+Is there another fitting needed by the model to correlate initial charge distribution vs. Vt?
+
+\noindent \textit{\\Our response: }
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3} - B}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Column 2 at Page 4}
+
+\hspace{40pt} \noindent \textit{Figure\#: - }
+
+\subsection*{\textit{Comment \# 4}}
+
+\noindent \textit{Review wrote: }
+
+As understood from the study, the proposed method is rather general to simplify the retention loss simulation.
+Any particular reason to highlight “cryogenic condition”, in manuscript title?
+
+\noindent \textit{\\Our response: }
+
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
+
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3} - B}
+
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Column 2 at Page 4}
+
+\hspace{40pt} \noindent \textit{Figure\#: - }
+
+\end{document}
