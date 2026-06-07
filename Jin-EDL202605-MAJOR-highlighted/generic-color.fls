@@ -334,8 +334,6 @@ INPUT .\fig2.png
 INPUT .\fig2.png
 INPUT .\fig2.png
 INPUT .\fig2.png
-INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro7t.vf
-INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT .\fig3.png
 INPUT .\fig3.png
 INPUT .\fig3.png
@@ -344,6 +342,8 @@ INPUT .\fig3.png
 INPUT .\fig3.png
 INPUT .\fig3.png
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr7t.tfm
+INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro7t.vf
+INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr7t.vf
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvrc8t.vf
