@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1780846751.40962 "c:/Users/joshs/Desktop/GitUpload/EDLtarget-manuscript-Mar/Jin-EDL202605-MAJOR-highlighted/generic-color.tex" "generic-color.pdf" "generic-color" 1780846752.58977 0
+["pdflatex"] 1780844408.90156 "c:/Users/joshs/Desktop/GitUpload/EDLtarget-manuscript-Mar/Jin-EDL202605-MAJOR-highlighted/generic-color.tex" "generic-color.pdf" "generic-color" 1780844410.36878 0
   "C:/Users/joshs/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1780757628 83609 ebbc432e6cbbb238d39535255db2c8bd ""
   "C:/Users/joshs/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1748184191 13159325 f8b5a48bb2fdd4d05fd99ce32af1d3a8 ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -155,13 +155,13 @@
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/tex/latex/ulem/ulem.sty" 1578651445 15682 94f55b803e160cf7fb6e4d77d07cfe1d ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "LOGO-generic-web.eps" 1780755251 98268 991288daab2defa3899e7c0d849884be ""
-  "c:/Users/joshs/Desktop/GitUpload/EDLtarget-manuscript-Mar/Jin-EDL202605-MAJOR-highlighted/generic-color.tex" 1780846749 20596 40525486ef2f2593d5eda5ba754cc2c7 ""
+  "c:/Users/joshs/Desktop/GitUpload/EDLtarget-manuscript-Mar/Jin-EDL202605-MAJOR-highlighted/generic-color.tex" 1780844408 21403 6ae49b437687b232e318387b1e7afe78 ""
   "fig1.png" 1780760958 103227 09bc36822cc2b24e12d65835545481ce ""
   "fig2.png" 1780755251 63752 6cb13e19e0accd57989a8d789fa7e8f8 ""
   "fig3.png" 1780839896 52096 58ddecec6db645fe44543a2b2d8e62be ""
-  "generic-color.aux" 1780846752 7638 5cf68de33a8400c27d7bc661ba9dcaff "pdflatex"
-  "generic-color.out" 1780846752 1094 b940704454b799530e076d3eb0292739 "pdflatex"
-  "generic-color.tex" 1780846749 20596 40525486ef2f2593d5eda5ba754cc2c7 ""
+  "generic-color.aux" 1780844410 8047 60af8ffadfdcc427701c19c54ae25905 "pdflatex"
+  "generic-color.out" 1780844410 1094 b940704454b799530e076d3eb0292739 "pdflatex"
+  "generic-color.tex" 1780844408 21403 6ae49b437687b232e318387b1e7afe78 ""
   "generic.sty" 1780755251 192 e8d3ecc691fbbb2da183dfc84a675b29 ""
   "ieeecolor.cls" 1780755251 224773 9f9540495f1e1a992a162661c1be18be ""
   (generated)
