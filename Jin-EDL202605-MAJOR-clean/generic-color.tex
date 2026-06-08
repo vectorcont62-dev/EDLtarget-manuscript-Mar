@@ -131,7 +131,7 @@ Furthermore, \eqref{b} indicates that $\mathbf{b}(\Delta Q_i, V_\text{G} - V_\te
     \centering
     \includegraphics[width=\columnwidth]{fig1.png}
     \caption{(a) shows a radial slice of 3-D NAND flash memory, 
-    (b) shows the programmed trapped charge distribution, 
+    (b) shows TCAD-extracted post-program trapped charge distribution, 
     (c) shows capacitance and node charge representation,
     and (d) shows the visualization of $\Delta Q_i$ for each node.}
     \label{fig1}
@@ -169,7 +169,7 @@ The threshold voltage difference can be calculated with single determinant compu
     \centering
     \includegraphics[width=\columnwidth]{fig2.png}
     \caption{(a) The band diagram with barrier notations where detrapping of trapped electron occurs,
-    (b) a detail programmed trapped charge distribution after program operation, 
+    (b) the radial trapped charge distribution used as the model initial condition, 
     and (c) TCAD parameter deck and used trap profile within the simulation~\cite{C.Lee.JJAP2026, H.Choi.TED2024, Han.TED2026,Verreck.IEDM}.}
     \label{fig2}
 \end{figure}
@@ -211,7 +211,8 @@ Therefore, for a fixed spatial/energy discretization and a fixed number of evalu
     \centering
     \includegraphics[width=\columnwidth]{fig3.png}
     \caption{(a) The TCAD simulation calibration with the measurement from previous study~\cite{Refaldi.IRPS2025}.
-    (b) A detail detrapping curve variation over time with $t_\text{TOX}$ from 3~nm to 5~nm.}
+    (b) A detail detrapping curve variation over time with $t_\text{TOX}$ from 3~nm to 5~nm.
+    (c) Comparison between time-step-free simulation to iteratively refreshed simulation showing almost no difference.}
     \label{fig3}
 \end{figure}
 
@@ -223,29 +224,36 @@ Therefore, for a fixed spatial/energy discretization and a fixed number of evalu
 \toprule
 Property & TCAD & Time-step-free model\\
 \midrule
-\shortstack[l]{Temporal treatment\\{}} & \shortstack[l]{sequential time stepping\\{}} & \shortstack[l]{closed-form evaluation\\of eq (\ref{autonomousSoluation})}\\
-\shortstack[l]{Dependence on\\final physical time\\{}} & {\shortstack[l]{Runtime increases with\\the final retention time\\{}}}& \shortstack[l]{Runtime independent of\\final physical time} \\
+\shortstack[l]{Temporal treatment\\{}} & \shortstack[l]{sequential time stepping\\{}} & \shortstack[l]{closed-form\\evaluation of eq (\ref{autonomousSoluation})}\\
+\shortstack[l]{Dependence on\\final physical time\\{}} & {\shortstack[l]{Runtime increases with\\the final retention time\\{}}}& \shortstack[l]{Runtime independent\\of final physical time} \\
 \shortstack[l]{Run Time (s)\\(average of Fig.~\ref{fig3}(b))} & \shortstack[l]{$>$25000\\{}} & \shortstack[l]{$<$4\\{}} \\
 \bottomrule
 \end{tabular}
 \end{table}
 
 
-According to \cite{Refaldi.IRPS2025}, cryogenic conditions enable the detrapping component to be isolated from retention loss.
+According to \cite{Refaldi.IRPS2025}, cryogenic conditions enable the detrapping component to be {separated from thermally activated retention-loss components}.
 However, direct TCAD simulation at cryogenic temperature about 4.2~K condition did not converge reliably in our setup.
-Therefore, to emulate cryogenic conditions during retention operation within the TCAD framework, the capture cross section was adjusted to an extremely low value ($\sigma_\mathrm{n} \rightarrow 0$) only during retention. 
+Therefore, two convergence tendencies were compared in the extreme condition: one obtained by lowering the temperature toward the lowest convergent cryogenic range, and the other obtained by reducing the electron capture cross section toward zero.
+Both approaches showed the same retention-time tendency in the extreme condition, indicating that the suppression of thermally activated transitions can reproduce the dominant cryogenic detrapping behavior within the convergent TCAD framework.
+Therefore, to emulate cryogenic conditions during retention operation within the TCAD framework, the capture cross section was adjusted to an extremely low value ($\sigma_\mathrm{n} \rightarrow 0$) only during retention.
 This manipulation suppresses thermal electron transitions between trapped and conduction states within the CTN layer, while maintaining physical consistency in other mechanisms~\cite{TCADmanual.2022}.
+Thus, every TCAD simulation results shown in \hbox{Fig.~\ref{fig3}} should be interpreted as a calibrated cryogenic-emulation benchmark rather than a direct 4.2~K TCAD simulation.
 
+The TCAD benchmark was built using Synopsys Sentaurus TCAD.
+The retention deck includes thermionic emission, Poole--Frenkel emission, and nonlocal tunneling, providing a TCAD reference with thermal and tunneling detrapping mechanisms~\cite{TCADmanual.2022}.
 The TCAD deck shown in Fig.~\ref{fig2}(c) was calibrated by matching the retention time scale of the measurement in previous study~\cite{Refaldi.IRPS2025}.
 Since $\Delta V_\text{th}$ is reported in arbitrary units, the calibration was done by matching time scale only.
 Program operation was performed by single $1~\mu s$ pulse and calibrated to obtain $\Delta V_\text{th} = 1.8$~V.
 To properly focus on the detrapping effect from the CTN layer, bandgap-engineered processes were neglected and program operation was performed with fresh cell.
-% Lateral migration retention loss was ignored by selecting neighboring data pattern~\cite{Chou.IEDM2023}.
 
-The model validation is performed using Synopsys TCAD simulations calibrated against previous retention modeling studies~\cite{Han.TED2026, Jin.TED2025}. 
 In the model calculation, the trap energy was divided into 100 bins, and the CTN layer was discretized into 30 slices.
 The variation of the $t_\text{TOX}$ showed the most dominancy in detrapping time transient curve.
 In Fig.~\ref{fig3}(b), $t_\text{TOX}$ from 3~nm to 5~nm for both TCAD simulation and the model were performed, showing good match with each other.
+To verify the time-step-free formulation, an iterative refresh test was performed as shown in Fig.~\hbox{\ref{fig3}(c)}.
+{In the refresh calculation, the trapped-charge distribution is sequentially updated after each retention interval and used as the initial condition for the next step, whereas the proposed method directly predicts the transient from the initial distribution without intermediate updates.
+Both approaches show nearly identical $\Delta V_\text{th}$ behavior over the entire retention range, with only about 3\% difference from time exceeding $10^9$~s.
+Therefore, the time-step-free simulation was chosen as the main method of this study since the iterative refresh test test simply multiplies the simulation time by the total number of iterations.
 
 Table~\ref{MethodComparisons} shows the comparison between TCAD and the model.
 The table shows how much computation time and resource efficiency could be improved through the time-step-free model.
@@ -257,7 +265,7 @@ The novelty of time-step-free modeling is demonstrated through significant compu
 Additionally, compared to TCAD simulations calibrated with physical parameters from various prior studies including cryogenic condition, the proposed model demonstrates good match with TCAD simulation within extremely short timeframe. 
 
 
-
+\newpage
 \begin{thebibliography}{00}
 
 \bibitem{agoda} A. Goda, K. K. Muchherla, and P. Feeley, "Reliability of 3D NAND Flash for Future Storage Systems (Invited)," 2023 IEEE International Reliability Physics Symposium (IRPS), Monterey, CA, USA, 2023, pp. 1-10, doi: \href{https://doi.org/10.1109/IRPS48203.2023.10118280}{10.1109/IRPS48203.2023.10118280}.

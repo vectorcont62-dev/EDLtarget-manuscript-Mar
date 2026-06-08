@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1780630236.32077 "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/Jin-EDL202606-MAJOR-Comment/Jin_EDL202606-MAJOR-Comment.tex" "Jin_EDL202606-MAJOR-Comment.pdf" "Jin_EDL202606-MAJOR-Comment" 1780630237.63409 0
+["pdflatex"] 1780921232.32943 "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/Jin-EDL202606-MAJOR-Comment/Jin_EDL202606-MAJOR-Comment.tex" "Jin_EDL202606-MAJOR-Comment.pdf" "Jin_EDL202606-MAJOR-Comment" 1780921233.55048 0
   "C:/Users/joshs/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1780628345 83609 ebbc432e6cbbb238d39535255db2c8bd ""
   "C:/Users/joshs/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1757667307 13257343 b5e7d33c22ebfb1f6f80b4a61e987b92 ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc" 1458473887 4993 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -31,6 +31,9 @@
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/tfm/public/latex-fonts/lasy6.tfm" 1136765053 520 4889cce2180234b97cad636b6039c722 ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1247596667 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1247596666 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
+  "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1247596667 35752 024fb6c41858982481f6968b5fc26508 ""
+  "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1247596667 32726 39f0f9e62e84beb801509898a605dbd5 ""
+  "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1247596667 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb" 1136820948 44729 fea0975e20ec51c992338362f05f1146 ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmbi8a.pfb" 1136820948 44656 0cbca70e0534538582128f6b54593cca ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb" 1136820948 46026 687528a208fbfc1f00832bb96cccebbb ""
@@ -99,10 +102,10 @@
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/tex/latex/ulem/ulem.sty" 1578651445 15682 94f55b803e160cf7fb6e4d77d07cfe1d ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty" 1388490452 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
   "C:/Users/joshs/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "Jin_EDL202606-MAJOR-Comment.aux" 1780630237 162 f0fda7573680236e99560fa2ea99f7ba "pdflatex"
-  "Jin_EDL202606-MAJOR-Comment.out" 1780630237 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "Jin_EDL202606-MAJOR-Comment.tex" 1780630235 9440 5f421f9cbad7db159894c5aa32c9d6e9 ""
-  "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/Jin-EDL202606-MAJOR-Comment/Jin_EDL202606-MAJOR-Comment.tex" 1780630235 9440 5f421f9cbad7db159894c5aa32c9d6e9 ""
+  "Jin_EDL202606-MAJOR-Comment.aux" 1780921233 162 8041607b76d73e3dcbdb7e912bad98fd "pdflatex"
+  "Jin_EDL202606-MAJOR-Comment.out" 1780921233 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "Jin_EDL202606-MAJOR-Comment.tex" 1780921231 26358 14f9189626a952b7b137fc4040c4bb9a ""
+  "c:/Users/joshs/Desktop/local-laptop/EDLtarget-manuscript-Mar/Jin-EDL202606-MAJOR-Comment/Jin_EDL202606-MAJOR-Comment.tex" 1780921231 26358 14f9189626a952b7b137fc4040c4bb9a ""
   (generated)
   "Jin_EDL202606-MAJOR-Comment.aux"
   "Jin_EDL202606-MAJOR-Comment.log"
