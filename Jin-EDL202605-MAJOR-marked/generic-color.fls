@@ -1,6 +1,6 @@
-PWD c:\Users\joshs\Desktop\GitUpload\EDLtarget-manuscript-Mar\Jin-EDL202605-MAJOR-highlighted
+PWD c:\Users\joshs\Desktop\GitUpload\EDLtarget-manuscript-Mar\Jin-EDL202605-MAJOR-marked
 INPUT C:\Users\joshs\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\joshs\Desktop\GitUpload\EDLtarget-manuscript-Mar\Jin-EDL202605-MAJOR-highlighted\generic-color.tex
+INPUT c:\Users\joshs\Desktop\GitUpload\EDLtarget-manuscript-Mar\Jin-EDL202605-MAJOR-marked\generic-color.tex
 OUTPUT generic-color.log
 INPUT .\ieeecolor.cls
 INPUT ieeecolor.cls
@@ -168,6 +168,8 @@ INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex\generic\uniquecounter\uni
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex\latex\ulem\ulem.sty
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex\latex\ulem\ulem.sty
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\tfm\public\latex-fonts\lasy6.tfm
+INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex\latex\cancel\cancel.sty
+INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex\latex\cancel\cancel.sty
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex\latex\lineno\lineno.sty
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex\latex\lineno\lineno.sty
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex\latex\l3backend\l3backend-pdftex.def
@@ -393,6 +395,8 @@ INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\c
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy5.pfb
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\cm\cmsy7.pfb
+INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
+INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\latxfont\line10.pfb
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msam10.pfb
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\type1\public\amsfonts\symbols\msbm10.pfb

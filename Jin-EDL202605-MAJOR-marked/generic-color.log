@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.25)  8 JUN 2026 00:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.5.25)  10 JUN 2026 02:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**c:/Users/joshs/Desktop/GitUpload/EDLtarget-manuscript-Mar/Jin-EDL202605-MAJOR-highlighted/generic-color.tex
-(c:/Users/joshs/Desktop/GitUpload/EDLtarget-manuscript-Mar/Jin-EDL202605-MAJOR-highlighted/generic-color.tex
+**c:/Users/joshs/Desktop/GitUpload/EDLtarget-manuscript-Mar/Jin-EDL202605-MAJOR-marked/generic-color.tex
+(c:/Users/joshs/Desktop/GitUpload/EDLtarget-manuscript-Mar/Jin-EDL202605-MAJOR-marked/generic-color.tex
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-04-29>
 (ieeecolor.cls
@@ -406,6 +406,8 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \ULC@box=\box61
 Package: ulem 2019/11/18
 \ULdepth=\dimen260
+) (C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex/latex/cancel\cancel.sty
+Package: cancel 2013/04/12 v2.2 Cancel math terms
 ) (C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
 Package: lineno 2026/03/08 line numbers on paragraphs v5.9
 \linenopenalty=\count331
@@ -429,24 +431,24 @@ File: l3backend-pdftex.def 2025-04-14 L3 backend support: PDF output (pdfTeX)
 ) (generic-color.aux)
 \openout1 = `generic-color.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
  (C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count340
@@ -466,64 +468,64 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
  (C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-Package hyperref Info: Link coloring OFF on input line 23.
+Package hyperref Info: Link coloring OFF on input line 24.
  (generic-color.out) (generic-color.out)
 \@outlinefile=\write3
 \openout3 = `generic-color.out'.
 
-Package color Info: Redefining color nblue on input line 32.
-Package color Info: Redefining color mblue on input line 32.
-LaTeX Font Info:    Trying to load font information for OT1+phv on input line 32.
+Package color Info: Redefining color nblue on input line 33.
+Package color Info: Redefining color mblue on input line 33.
+LaTeX Font Info:    Trying to load font information for OT1+phv on input line 33.
  (C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1phv.fd
 File: ot1phv.fd 2020/03/25 scalable font definitions for OT1/phv.
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <11> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 32.
-Package color Info: Redefining color nblue on input line 32.
-Package color Info: Redefining color mblue on input line 32.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 33.
+Package color Info: Redefining color nblue on input line 33.
+Package color Info: Redefining color mblue on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
  (C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
  (C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <8> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 32.
-Package color Info: Redefining color nblue on input line 32.
-Package color Info: Redefining color mblue on input line 32.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 33.
+Package color Info: Redefining color nblue on input line 33.
+Package color Info: Redefining color mblue on input line 33.
 LaTeX Font Info:    Font shape `OT1/phv/b/it' in size <9> not available
-(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 32.
-Package color Info: Redefining color nblue on input line 40.
-Package color Info: Redefining color mblue on input line 40.
+(Font)              Font shape `OT1/phv/b/sl' tried instead on input line 33.
+Package color Info: Redefining color nblue on input line 41.
+Package color Info: Redefining color mblue on input line 41.
 
-Underfull \hbox (badness 6348) in paragraph at lines 40--42
+Underfull \hbox (badness 6348) in paragraph at lines 41--43
 []\OT1/phv/b/sl/9 Index Terms\OT1/phv/b/n/9 ---[]time-step-free mod-el-ing, au-tonomous
  []
 
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 44.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 45.
 (C:\Users\joshs\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <10> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 62.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 63.
 
 
 Package epstopdf Info: Source file: <LOGO-generic-web.eps>
-(epstopdf)                    date: 2026-06-06 23:14:11
+(epstopdf)                    date: 2026-06-09 00:25:26
 (epstopdf)                    size: 98268 bytes
 (epstopdf)             Output file: <LOGO-generic-web-eps-converted-to.pdf>
-(epstopdf)                    date: 2026-06-06 23:14:11
+(epstopdf)                    date: 2026-06-09 00:25:26
 (epstopdf)                    size: 6716 bytes
 (epstopdf)             Command: <miktex-epstopdf --outfile=LOGO-generic-web-eps-converted-to.pdf LOGO-generic-web.eps>
-(epstopdf)             \includegraphics on input line 129.
+(epstopdf)             \includegraphics on input line 130.
 Package epstopdf Info: Output file is already uptodate.
 <LOGO-generic-web-eps-converted-to.pdf, id=38, 55.20625pt x 34.1275pt>
 File: LOGO-generic-web-eps-converted-to.pdf Graphic file (type pdf)
 <use LOGO-generic-web-eps-converted-to.pdf>
-Package pdftex.def Info: LOGO-generic-web-eps-converted-to.pdf  used on input line 129.
+Package pdftex.def Info: LOGO-generic-web-eps-converted-to.pdf  used on input line 130.
 (pdftex.def)             Requested size: 48.0pt x 29.674pt.
 
 Overfull \hbox (259.0pt too wide) has occurred while \output is active
@@ -550,33 +552,33 @@ Overfull \vbox (19.674pt too high) has occurred while \output is active []
 <fig1.png, id=75, 262.362pt x 246.813pt>
 File: fig1.png Graphic file (type png)
 <use fig1.png>
-Package pdftex.def Info: fig1.png  used on input line 132.
+Package pdftex.def Info: fig1.png  used on input line 133.
 (pdftex.def)             Requested size: 252.0pt x 237.06583pt.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <7> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 141.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 142.
 LaTeX Font Info:    Font shape `OT1/phv/m/it' in size <5> not available
-(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 141.
+(Font)              Font shape `OT1/phv/m/sl' tried instead on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 141.
+(hyperref)                removing `math shift' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Delta' on input line 141.
+(hyperref)                removing `\Delta' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 141.
+(hyperref)                removing `subscript' on input line 142.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 141.
+(hyperref)                removing `math shift' on input line 142.
 
 <fig2.png, id=78, 226.665pt x 239.586pt>
 File: fig2.png Graphic file (type png)
 <use fig2.png>
-Package pdftex.def Info: fig2.png  used on input line 170.
+Package pdftex.def Info: fig2.png  used on input line 171.
 (pdftex.def)             Requested size: 252.0pt x 266.37132pt.
 
 
@@ -607,14 +609,14 @@ pdfTeX warning: pdflatex: pop empty color page stack 0
 
 pdfTeX warning: pdflatex: pop empty color page stack 0
  <./fig1.png> <./fig2.png>]
-<fig3.png, id=105, 200.385pt x 152.643pt>
+<fig3.png, id=106, 200.385pt x 152.643pt>
 File: fig3.png Graphic file (type png)
 <use fig3.png>
-Package pdftex.def Info: fig3.png  used on input line 212.
+Package pdftex.def Info: fig3.png  used on input line 213.
 (pdftex.def)             Requested size: 252.0pt x 191.96785pt.
 \width=\dimen268
 
-Overfull \hbox (4.49435pt too wide) in paragraph at lines 223--232
+Overfull \hbox (4.49435pt too wide) in paragraph at lines 224--233
  [][] 
  []
 
@@ -646,17 +648,17 @@ Package rerunfilecheck Info: File `generic-color.out' has not changed.
 (rerunfilecheck)             Checksum: B940704454B799530E076D3EB0292739;1094.
  ) 
 Here is how much of TeX's memory you used:
- 11940 strings out of 469923
- 185699 string characters out of 5469170
- 680435 words of memory out of 5000000
- 38510 multiletter control sequences out of 15000+600000
+ 11981 strings out of 469923
+ 186429 string characters out of 5469170
+ 704835 words of memory out of 5000000
+ 38547 multiletter control sequences out of 15000+600000
  707352 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,19n,79p,728b,551s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
-Output written on generic-color.pdf (4 pages, 491391 bytes).
+ 75i,19n,79p,723b,567s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/latxfont/line10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvbo8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/uhvro8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/joshs/AppData/Local/Programs/MiKTeX/fonts/type1/urw/times/utmr8a.pfb>
+Output written on generic-color.pdf (4 pages, 498128 bytes).
 PDF statistics:
- 279 PDF objects out of 1000 (max. 8388607)
+ 284 PDF objects out of 1000 (max. 8388607)
  43 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,6 +1,6 @@
-PWD c:\Users\joshs\Desktop\GitUpload\EDLtarget-manuscript-Mar\Jin-EDL202605-MAJOR-highlighted
+PWD c:\Users\joshs\Desktop\GitUpload\EDLtarget-manuscript-Mar\Jin-EDL202605-MAJOR-clean
 INPUT C:\Users\joshs\AppData\Local\MiKTeX\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\joshs\Desktop\GitUpload\EDLtarget-manuscript-Mar\Jin-EDL202605-MAJOR-highlighted\generic-color.tex
+INPUT c:\Users\joshs\Desktop\GitUpload\EDLtarget-manuscript-Mar\Jin-EDL202605-MAJOR-clean\generic-color.tex
 OUTPUT generic-color.log
 INPUT .\ieeecolor.cls
 INPUT ieeecolor.cls
@@ -334,6 +334,8 @@ INPUT .\fig2.png
 INPUT .\fig2.png
 INPUT .\fig2.png
 INPUT .\fig2.png
+INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro7t.vf
+INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT .\fig3.png
 INPUT .\fig3.png
 INPUT .\fig3.png
@@ -342,8 +344,6 @@ INPUT .\fig3.png
 INPUT .\fig3.png
 INPUT .\fig3.png
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr7t.tfm
-INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvro7t.vf
-INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvro8r.tfm
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvr7t.vf
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\tfm\adobe\helvetic\phvr8r.tfm
 INPUT C:\Users\joshs\AppData\Local\Programs\MiKTeX\fonts\vf\adobe\helvetic\phvrc8t.vf
