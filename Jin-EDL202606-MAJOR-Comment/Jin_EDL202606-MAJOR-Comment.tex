@@ -36,7 +36,7 @@ In particular, Fig.~3(c) has been newly added during the revision process to com
 The corresponding changes have been incorporated into the revised manuscript.
 Note that every changes in manuscript is indicated by line \# at page \# based on \uline{marked revision manuscript}.
 
-\section*{\normalsize{Authors' responses to the reviews' comments:}}
+\section*{\normalsize{Authors' responses to the reviewer's comments:}}
 
 We thank the reviewer for pointing out that the validation and modeling assumptions should be clarified at several connected levels.
 The comments are closely related to the physical basis and scope of the cryogenic TCAD emulation, the assumptions used in the non-iterative time-step-free formulation, and the numerical convergence of the discretized implementation.
@@ -57,7 +57,7 @@ Please also provide a sensitivity analysis showing whether the retention transie
 
 \noindent \textit{\\Our response: }
 
-We thank the review for this important comment.
+We thank the reviewer for this important comment.
 We agree that reducing only $\sigma_\mathrm{n}$ does not reproduce all temperature-dependent physical quantities at 4.2~K, such as carrier statistics, thermal velocity, Fermi occupation, emission/capture balance, and field-assisted transport parameters.
 Therefore, in the revised manuscript, the reduced-$\sigma_\mathrm{n}$ condition is clarified as a cryogenic-emulation benchmark for suppressing thermally activated trap-to-conduction-band transitions, rather than as a full direct TCAD simulation at 4.2~K.
 To justify this treatment, we performed two independent convergence tests: (i) a temperature-lowering test and (ii) $\sigma_n$-lowering test.
@@ -80,7 +80,7 @@ Accordingly, all TCAD results in Fig.~3 of the revised manuscript are described 
 
 \hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3}}
 
-\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 6-18 at Page 3}
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 9-18 at Page 3}
 
 \hspace{40pt} \noindent \textit{Figure\#: - }
 
@@ -110,7 +110,7 @@ The proposed model then focuses on the tunneling-related detrapping component is
 
 \hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3}}
 
-\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 28-32 at Page 3}
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 28-32, 43-45 at Page 3}
 
 \hspace{40pt} \noindent \textit{Figure\#: - }
 
@@ -142,7 +142,7 @@ We revised the manuscript to state this scope explicitly by describing the TCAD 
 
 \hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3}}
 
-\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 24-27, 79-80 at Page 3}
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 24-27, 79-81 at Page 3}
 
 \hspace{40pt} \noindent \textit{Figure\#: - }
 
@@ -166,15 +166,21 @@ To examine the error introduced by this approximation, we added Fig.~3(c), which
 In the iterative refresh test, the trapped-charge distribution is sequentially updated after each retention interval and then used as the initial condition for the next interval.
 Therefore, the refresh test partially accounts for the change in the electrostatic/barrier condition caused by the emitted charge.
 
+\begin{figure}[h]
+    \raggedright
+    \includegraphics[width=\columnwidth]{Fig3(c).png}
+    {\normalsize Fig. 3(c): Comparison between the time-step-free simulation and the iterative refresh test for assessing the fixed-emission-rate approximation.}
+\end{figure}
+
 As shown in Fig.~3(c), the time-step-free simulation and the iteratively refreshed simulation show nearly identical $\Delta V_\mathrm{T}$ behavior over the retention range, with only about 3\% difference appearing after times exceeding $10^9$~s.
 This result indicates that the fixed-emission-rate approximation introduces only a minor error for the cryogenic radial detrapping benchmark considered in this work.
 Therefore, the non-iterative time-step-free simulation was selected as the main method because the iterative refresh test simply multiplies the simulation time by the total number of refresh iterations while producing almost the same retention result.
 
 \noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
 
-\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 2}-C \uppercase\expandafter{\romannumeral 3}}
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 2}-C, \uppercase\expandafter{\romannumeral 3}}
 
-\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 27-29 and eq. (13) at Page 2, Line 50-61 at Page 3}
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 27-29 and eq. (13) at Page 2, Line 51-62 at Page 3}
 
 \hspace{40pt} \noindent \textit{Figure\#: Fig. 3(c) (newly added)}
 
@@ -187,10 +193,11 @@ Was it obtained from TCAD PGM simulation, and analytical assumption, empirical f
 
 \noindent \textit{\\Our response: }
 
+We thank the reviewer for pointing out the need to clarify the origin of the initial trapped-charge distribution.
 The initially programmed trapped-charge information used in the proposed model was obtained from the TCAD program simulation and the corresponding TCAD-aligned model profile.
 Specifically, the program operation was performed using the same TCAD device structure and parameter deck, and the post-program CTN trapped-charge distribution was extracted after the program pulse, as shown in Fig.~1(b).
 
-For the time-step-free calculation, this post-program charge state was represented by the TCAD-aligned modeled radial trapped-charge profile in Fig.~2(b), whose profile shape is consistent with previous TCAD-based radial charge-profile modeling studies.
+For the time-step-free calculation, this post-program charge state was represented by the TCAD-aligned modeled radial trapped-charge profile in Fig.~2(b), whose profile shape is consistent with previous TCAD-based radial charge-profile modeling studies [6], [7].
 Therefore, Fig.~1(b) and Fig.~2(b) are not independent fitting profiles; they describe the same post-program trapped-charge state in two different contexts: TCAD extraction and model initialization.
 
 The initial profile was not assumed by an arbitrary analytical function and was not fitted from the retention transient.
@@ -232,21 +239,19 @@ The result obtained with 100 trap-energy bins and 30 radial CTN slices is alread
 Further refinement produces negligible change in the retention transient while increasing the computational cost.
 Therefore, 100 energy bins and 30 radial CTN slices were selected as a numerically converged and computationally efficient discretization.
 
-We revised the manuscript to state the discretization used in the model calculation and to clarify that the selected discretization was checked for convergence.
+We revised the manuscript to state the discretization used in the model were confirmed to be in converged regime.
 
+\noindent \textit{\\Corresponding change in manuscript: Yes \\Location of Change:}
 
+\hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3}}
 
-\noindent \textit{\\Corresponding change in manuscript: No \\Location of Change:}
-
-\hspace{40pt} \noindent \textit{Section: -}
-
-\hspace{40pt} \noindent \textit{Page\# and rough location in page: -}
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 47-48 at Page 3}
 
 \hspace{40pt} \noindent \textit{Figure\#: - }
 
 \newpage
 
-\section*{\normalsize{Authors' responses to the reviews' comments:}}
+\section*{\normalsize{Authors' responses to the reviewer's comments:}}
 
 We thank the reviewer for recognizing the main advantage of the proposed method in reducing the computation time of retention-loss simulation.
 In response to the reviewer’s comments, we have clarified the model scope with respect to lateral charge migration, the possible extension of the time-step-free framework to coupled migration processes, the origin of the initial programmed trapped-charge distribution, and the reason why the cryogenic condition is highlighted in the manuscript.
@@ -261,6 +266,7 @@ Is there lateral charge migration process considered in the proposed method, for
 
 \noindent \textit{\\Our response: }
 
+We thank the reviewer for this important comment.
 Lateral charge migration is not explicitly included in the proposed time-step-free model.
 The proposed model focuses on the tunneling-related detrapping component toward the channel-side and word-line-side directions under the cryogenic-emulation condition.
 
@@ -303,7 +309,7 @@ This extensibility is possible because the computational cost of the proposed de
 
 \hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3}}
 
-\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 66-69 at Page 3}
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 67-70 at Page 3}
 
 \hspace{40pt} \noindent \textit{Figure\#: - }
 
@@ -362,7 +368,7 @@ Thus, the title emphasizes the physical regime in which the proposed model is va
 
 \hspace{40pt} \noindent \textit{Section: \uppercase\expandafter{\romannumeral 3}}
 
-\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 6-18 at Page 3}
+\hspace{40pt} \noindent \textit{Page\# and rough location in page: Line 6-7 at Page 3}
 
 \hspace{40pt} \noindent \textit{Figure\#: - }
 

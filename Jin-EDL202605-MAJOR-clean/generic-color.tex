@@ -235,7 +235,7 @@ Property & TCAD & Time-step-free model\\
 According to \cite{Refaldi.IRPS2025}, cryogenic conditions enable the detrapping component to be {separated from thermally activated retention-loss components}.
 However, direct TCAD simulation at cryogenic temperature about 4.2~K condition did not converge reliably in our setup.
 {Therefore, two convergence tendencies were compared in the extreme condition: one obtained by lowering the temperature toward the lowest convergent cryogenic range, and the other obtained by reducing the electron capture cross section toward zero.}
-{Both approaches showed the same retention-time tendency in the extreme condition, indicating that the suppression of thermally activated transitions can reproduce the dominant cryogenic detrapping behavior within the convergent TCAD framework.}
+{Both approaches showed a consistent retention time trend in the extreme condition, indicating that the suppression of thermally activated transitions can reproduce the dominant cryogenic detrapping behavior within the convergent TCAD framework.}
 Therefore, to emulate cryogenic conditions during retention operation within the TCAD framework, the capture cross section was adjusted to an extremely low value ($\sigma_\mathrm{n} \rightarrow 0$) only during retention.
 This manipulation suppresses thermal electron transitions between trapped and conduction states within the CTN layer, while maintaining physical consistency in other mechanisms~\cite{TCADmanual.2022}.
 {Thus, every TCAD simulation results shown in \hbox{Fig.~\ref{fig3}} should be interpreted as a calibrated cryogenic-emulation benchmark rather than a direct 4.2~K TCAD simulation.}
@@ -248,7 +248,7 @@ Since $\Delta V_\text{th}$ is reported in arbitrary units, the calibration was d
 Program operation was performed by single $1~\mu s$ pulse and calibrated to obtain $\Delta V_\text{th} = 1.8$~V.
 To properly focus on the detrapping effect from the CTN layer, bandgap-engineered processes were neglected and program operation was performed with fresh cell.
 
-In the model calculation, the trap energy was divided into 100 bins, and the CTN layer was discretized into 30 slices.
+In the model calculation, the trap energy was divided into 100 bins, and the CTN layer was discretized into 30 slices{, which were confirmed to be in the converged regime}.
 The variation of the $t_\text{TOX}$ showed the most dominancy in detrapping time transient curve.
 In Fig.~\ref{fig3}(b), $t_\text{TOX}$ from 3~nm to 5~nm for both TCAD simulation and the model were performed, showing good {agreement} with each other.
 {To verify the time-step-free formulation, an iterative refresh test was performed as shown in Fig.~\hbox{\ref{fig3}(c)}.}
